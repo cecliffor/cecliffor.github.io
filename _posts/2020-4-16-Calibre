@@ -1,0 +1,44 @@
+---
+layout: post
+title: Calibre
+---
+
+Calibre server is installed to run my library, which give me access to my library on my home wifi.
+
+SSH into the Raspberry and install Calibre with:
+
+`sudo apt-get update && sudo apt-get install calibre`
+
+Now run the server with the calibre-server command followed by the path to the Calibre library:
+
+`calibre-server --with-library=/media/Media_1/Calibre_Library`
+
+This runs the Calibre content server on my home network at 192.168.0.65:8080, however I need to SSH into the server and manually start calibre-server on every boot, additionally calibre-server stops when I close the SSH connection.
+
+To rectify this, I created a service to start on boot with the following:
+
+Create file `/lib/systemd/system/calibre.service` with the following contents, and changed the `/media/Calibre Library` to `/media/Media_1/Calibre_Library`,
+
+To make it start on boot as a service:
+`sudo systemctl daemon-reload`
+`sudo systemctl enable calibre`
+`sudo systemctl start calibre`
+
+It's now available on my home wifi via browser at http://192.168.0.65:9000
+
+#------------------ calibre.service -----------------------
+[Unit]
+Description=Calibre Daemon
+After=syslog.target network.target
+
+[Service]
+User=osmc
+Group=osmc
+Restart=always
+RestartSec=20
+Type=simple
+ExecStart=/usr/bin/calibre-server -p 9000 --with-library "/media/Calibre Library"
+TimeoutStopSec=20
+ 
+[Install]
+WantedBy=multi-user.target
