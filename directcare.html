@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  
+  <!-- SEO Meta Tags -->
+  <title>Direct Care | Pathways Foot & Ankle | Transparent, Affordable Podiatry in Oregon City</title>
+  <meta name="description" content="What is direct care? Learn how Pathways Foot & Ankle delivers transparent pricing, longer appointments, and better outcomes by removing insurance barriers. See what you'll actually pay.">
+  <meta name="keywords" content="direct care podiatry, cash pay podiatrist, affordable foot doctor Oregon City, transparent pricing, no surprise bills, out of pocket costs, direct primary care podiatry">
+  <meta name="author" content="Dr. Craig Clifford, DPM, MHA">
+  <meta name="robots" content="index, follow">
+  
+  <!-- Open Graph / Social Media Tags -->
+  <meta property="og:title" content="Direct Care | Pathways Foot & Ankle">
+  <meta property="og:description" content="Transparent, affordable podiatric care without insurance restrictions. See what you'll actually pay.">
+  <meta property="og:image" content="PATHWAYS_FINAL.png">
+  <meta property="og:url" content="https://pathwaysfootankle.com/directcare.html">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Direct Care | Pathways Foot & Ankle">
+  <meta name="twitter:description" content="Transparent, affordable podiatric care without insurance restrictions.">
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&family=Rethink+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Font Awesome 6 (Free) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #F5F7F2;
+      color: #083104;
+      font-family: 'Rethink Sans', 'Segoe UI', Helvetica, Arial, sans-serif;
+      font-weight: 400;
+      line-height: 1.5;
+      scroll-behavior: smooth;
+    }
+
+    h1, h2, h3, .nav-links a, .page-title, .section-title, .faq-question {
+      font-family: 'DM Sans', 'Segoe UI', Helvetica, Arial, sans-serif;
+      font-weight: 700;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 28px;
+    }
+
+    @media (max-width: 640px) {
+      .container {
+        padding: 0 20px;
+      }
+    }
+
+    /* Header */
+    .site-header {
+      background: #F5F7F2;
+      border-bottom: 1px solid #e0ecd9;
+      padding: 8px 0;
+      position: static;
+      width: 100%;
+    }
+
+    .header-flex {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 18px;
+    }
+
+    .logo-img {
+      height: 115px;
+      width: auto;
+      display: block;
+    }
+    @media (max-width: 780px) {
+      .logo-img {
+        height: 80px;
+      }
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 24px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .nav-links a {
+      text-decoration: none;
+      font-weight: 600;
+      color: #083104;
+      font-size: 0.95rem;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover {
+      color: #438950;
+    }
+
+    .hamburger {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-size: 1.8rem;
+      color: #083104;
+      padding: 8px;
+    }
+    .hamburger:hover {
+      color: #438950;
+    }
+
+    @media (max-width: 780px) {
+      .nav-links {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+        padding: 20px 0 10px 0;
+        border-top: 1px solid #e0ecd9;
+        margin-top: 10px;
+      }
+      .nav-links.show {
+        display: flex;
+      }
+      .hamburger {
+        display: block;
+      }
+      .header-flex {
+        position: relative;
+      }
+    }
+
+    /* Page Content */
+    .page-header {
+      background: linear-gradient(135deg, #083104 0%, #0a4a0a 100%);
+      color: white;
+      padding: 60px 0 50px;
+      margin-bottom: 48px;
+    }
+    .page-title {
+      font-size: 2.8rem;
+      margin-bottom: 16px;
+    }
+    .page-subtitle {
+      font-size: 1.2rem;
+      opacity: 0.9;
+      max-width: 700px;
+    }
+
+    .content-card {
+      background: white;
+      border-radius: 48px;
+      padding: 48px;
+      margin-bottom: 48px;
+      box-shadow: 0 4px 18px rgba(0,0,0,0.03);
+      border: 1px solid #e2ecd9;
+    }
+
+    .section-title {
+      font-size: 1.8rem;
+      color: #083104;
+      margin-bottom: 24px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .section-title i {
+      color: #438950;
+      font-size: 1.8rem;
+    }
+
+    .highlight-box {
+      background: #F5F9F2;
+      border-left: 4px solid #438950;
+      padding: 24px 28px;
+      border-radius: 24px;
+      margin: 32px 0;
+    }
+
+    .cost-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 24px;
+      margin: 32px 0;
+    }
+    .cost-card {
+      background: #F5F7F2;
+      border-radius: 24px;
+      padding: 24px;
+      text-align: center;
+      border: 1px solid #e0ecd9;
+    }
+    .cost-card i {
+      font-size: 2rem;
+      color: #438950;
+      margin-bottom: 16px;
+    }
+    .cost-card h3 {
+      font-size: 1.3rem;
+      margin-bottom: 12px;
+    }
+    .cost-card p {
+      font-size: 0.9rem;
+      color: #4a6b3f;
+    }
+
+    .faq-item {
+      border-bottom: 1px solid #e0ecd9;
+      padding: 20px 0;
+    }
+    .faq-question {
+      font-size: 1.2rem;
+      color: #083104;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .faq-question i {
+      color: #438950;
+      transition: transform 0.3s;
+    }
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+      color: #4a6b3f;
+      line-height: 1.6;
+      padding-right: 20px;
+    }
+    .faq-item.active .faq-answer {
+      max-height: 300px;
+      margin-top: 12px;
+    }
+    .faq-item.active .faq-question i {
+      transform: rotate(180deg);
+    }
+
+    .cta-box {
+      background: #083104;
+      color: white;
+      border-radius: 40px;
+      padding: 48px;
+      text-align: center;
+      margin: 48px 0;
+    }
+    .cta-box h3 {
+      font-size: 1.8rem;
+      margin-bottom: 16px;
+    }
+    .cta-box p {
+      margin-bottom: 24px;
+      opacity: 0.9;
+    }
+    
+    /* Button styling matching homepage "Request Appointment" button */
+    .btn-outline-light {
+      background-color: #FFFFFF;
+      color: #083104;
+      padding: 14px 32px;
+      border-radius: 60px;
+      text-decoration: none;
+      font-weight: 700;
+      display: inline-block;
+      transition: 0.2s;
+      font-family: 'DM Sans', sans-serif;
+      border: none;
+      cursor: pointer;
+    }
+    .btn-outline-light:hover {
+      background-color: #438950;
+      color: white;
+    }
+    
+    /* Phone link styling - matches homepage contact card */
+    .phone-link {
+      color: white;
+      text-decoration: none;
+      border-bottom: 1px solid #438950;
+      transition: opacity 0.2s;
+    }
+    .phone-link:hover {
+      opacity: 0.8;
+    }
+
+    footer {
+      padding: 48px 0 32px;
+      text-align: center;
+      font-size: 0.85rem;
+      color: #44633e;
+      border-top: 1px solid #e2ecd9;
+      margin-top: 48px;
+    }
+
+    /* ========== SCROLL TO TOP BUTTON ========== */
+    .scroll-top-btn {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      width: 52px;
+      height: 52px;
+      background-color: #438950;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      transition: all 0.3s ease;
+      z-index: 1000;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(20px);
+    }
+    .scroll-top-btn:hover {
+      background-color: #083104;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+    }
+    .scroll-top-btn.show {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+    @media (max-width: 640px) {
+      .scroll-top-btn {
+        bottom: 20px;
+        right: 20px;
+        width: 44px;
+        height: 44px;
+        font-size: 1.2rem;
+      }
+    }
+
+    @media (max-width: 780px) {
+      .page-title { font-size: 2rem; }
+      .content-card { padding: 28px; }
+      .section-title { font-size: 1.5rem; }
+      .cta-box { padding: 32px 24px; }
+      .cost-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- Top Utility Bar -->
+<div style="background-color: #083104; width: 100%; position: relative; z-index: 100;">
+  <div style="display: flex; align-items: center; justify-content: center; padding: 0 28px; gap: 32px; flex-wrap: wrap; min-height: 44px;">
+    <a href="tel:+19713595299" style="color: white; text-decoration: none; font-family: 'DM Sans', sans-serif; font-size: 0.85rem; display: flex; align-items: center; gap: 8px; white-space: nowrap;">
+      <i class="fas fa-phone-alt" style="color: #438950;"></i> (971) 359-5299
+    </a>
+    <a href="https://www.google.com/maps/search/216+14th+St+Oregon+City+OR+97045" target="_blank" style="color: white; text-decoration: none; font-family: 'DM Sans', sans-serif; font-size: 0.85rem; display: flex; align-items: center; gap: 8px; text-align: center;">
+      <i class="fas fa-map-marker-alt" style="color: #438950;"></i> 216 14th St, Oregon City, OR 97045
+    </a>
+  </div>
+</div>
+<style>
+  @media (max-width: 640px) {
+    div[style*="background-color: #083104"] > div {
+      flex-direction: column !important;
+      gap: 8px !important;
+      padding: 8px 16px !important;
+      min-height: auto !important;
+    }
+    div[style*="background-color: #083104"] a {
+      white-space: normal !important;
+      text-align: center !important;
+      justify-content: center !important;
+    }
+  }
+</style>
+
+<header class="site-header">
+  <div class="container header-flex">
+    <div class="logo-area">
+      <a href="index.html">
+        <img src="PATHWAYS_FINAL.png" alt="Pathways Foot & Ankle - Holistic Podiatrist Oregon City" class="logo-img">
+      </a>
+    </div>
+    <button class="hamburger" id="hamburgerBtn" aria-label="Menu">
+      <i class="fas fa-bars"></i>
+    </button>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html#conditions">Conditions</a>
+      <a href="index.html#services">Services</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#contact">Contact</a>
+      <a href="index.html" style="background-color: #083104; padding: 8px 20px; border-radius: 40px; color: white !important;">Back to Home</a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <!-- Page Header -->
+  <div class="page-header">
+    <div class="container">
+      <h1 class="page-title">What's the real out-of-pocket cost?</h1>
+      <p class="page-subtitle">Honest answers about direct care. No insurance games. No surprise bills.</p>
+    </div>
+  </div>
+
+  <div class="container">
+    <!-- Main Explanation -->
+    <div class="content-card">
+      <div class="section-title">
+        <i class="fas fa-handshake"></i>
+        <h2>Care Without Compromise</h2>
+      </div>
+      <p style="font-size: 1.1rem; margin-bottom: 20px;">The modern healthcare system often gets between you and your doctor—rushed visits, insurance restrictions, and treatment decisions driven by coverage rather than compassion. At <b>Pathways Foot & Ankle</b>, we've chosen a different path.</p>
+      <p style="margin-bottom: 20px;">By stepping outside the traditional insurance model, we've removed the barriers that compromise care. That means:</p>
+      <ul style="margin-left: 24px; margin-bottom: 24px;">
+        <li style="margin-bottom: 10px;"><i class="fas fa-clock" style="color: #438950; margin-right: 10px;"></i> Unhurried appointments where you're truly heard</li>
+        <li style="margin-bottom: 10px;"><i class="fas fa-stethoscope" style="color: #438950; margin-right: 10px;"></i> Treatment plans based on what's best for you—not what an insurer will approve</li>
+        <li style="margin-bottom: 10px;"><i class="fas fa-dollar-sign" style="color: #438950; margin-right: 10px;"></i> Complete price transparency with no surprise bills</li>
+        <li style="margin-bottom: 10px;"><i class="fas fa-calendar-check" style="color: #438950; margin-right: 10px;"></i> No waiting weeks for authorizations or referrals</li>
+      </ul>
+      <div class="highlight-box">
+        <i class="fas fa-quote-left" style="color: #438950; font-size: 1.5rem; margin-bottom: 12px; display: block;"></i>
+        <p style="font-style: italic;">The result is better care, where the patient's health is the only priority. Just honest, individualized care from a specialist who has the time to listen, the expertise to heal, and the freedom to put you first.</p>
+      </div>
+    </div>
+
+    <!-- Cost Comparison -->
+    <div class="content-card">
+      <div class="section-title">
+        <i class="fas fa-chart-line"></i>
+        <h2>How does the cost compare?</h2>
+      </div>
+      <p style="margin-bottom: 24px;">Without the overhead of insurance billing, we keep our prices fair and transparent. Most patients find that direct care costs are comparable to—or even less than—their insurance copays and deductibles, especially when you factor in:</p>
+      
+      <div class="cost-grid">
+        <div class="cost-card">
+          <i class="fas fa-file-invoice-dollar"></i>
+          <h3>No Surprise Bills</h3>
+          <p>You'll know exactly what you pay before you receive care. Never a bill in the mail weeks later.</p>
+        </div>
+        <div class="cost-card">
+          <i class="fa-solid fa-arrow-trend-down"></i>
+          <h3>Lower Overhead</h3>
+          <p>No insurance administrative costs, no denied claims to appeal—savings passed directly to you.</p>
+        </div>
+        <div class="cost-card">
+          <i class="fas fa-credit-card"></i>
+          <h3>HSA / FSA Eligible</h3>
+          <p>Use your health savings account or flexible spending account for all services.</p>
+        </div>
+        <div class="cost-card">
+          <i class="fas fa-receipt"></i>
+          <h3>No Hidden Fees</h3>
+          <p>What you see is what you pay. Simple, honest, transparent pricing.</p>
+        </div>
+      </div>
+      
+      <div class="highlight-box" style="background: #083104; color: white; border-left-color: #438950;">
+        <p style="margin-bottom: 0; color: white;">Curious about a specific service? Call Dr. Clifford directly at <a href="tel:+19713595299" class="phone-link" style="color: white; text-decoration: none; border-bottom: 1px solid #438950;">(971) 359-5299</a> and he'll give you an honest estimate over the phone—no pressure, no obligation.</p>
+      </div>
+    </div>
+
+    <!-- What is Direct Care? -->
+    <div class="content-card">
+      <div class="section-title">
+        <i class="fas fa-question-circle"></i>
+        <h2>What is direct care, exactly?</h2>
+      </div>
+      <p style="margin-bottom: 16px;">Direct care is a simple concept: you pay directly for your medical care, and your doctor answers only to you—not to an insurance company.</p>
+      <p style="margin-bottom: 16px;">In the traditional model, your doctor spends more time fighting with insurance companies than they do treating you. Prior authorizations. Denied claims. Coding restrictions. Reimbursement cuts. None of that happens here.</p>
+      <p>At Pathways Foot & Ankle, Dr. Clifford spends his time where it belongs: with you. Longer appointments, more thorough evaluations, and treatment plans designed for your unique needs—not a one-size-fits-all insurance protocol.</p>
+    </div>
+
+    <!-- FAQ Section -->
+    <div class="content-card">
+      <div class="section-title">
+        <i class="fas fa-comments"></i>
+        <h2>Frequently Asked Questions</h2>
+      </div>
+      
+      <div class="faq-item">
+        <div class="faq-question">
+          <span>Can I still use my insurance?</span>
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+          <p>Many of our patients have insurance but choose direct care because they're tired of long waits, surprise bills, and rushed appointments. We'll provide a superbill with all the codes you need to submit to your insurance for potential out-of-network reimbursement. <b>Reimbursement is not guaranteed</b>—it depends entirely on your specific plan's out-of-network benefits. </p>
+        </div>
+      </div>
+      
+      <div class="faq-item">
+        <div class="faq-question">
+          <span>Will this cost more than using my insurance?</span>
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+          <p>For many patients, direct care is comparable to or cheaper than using insurance when you factor in copays, deductibles, and surprise bills. Plus, you receive longer, more thorough appointments — and you never need a referral, so there are no extra appointments or delays just to get permission for care.</p>
+        </div>
+      </div>      
+
+      <div class="faq-item">
+        <div class="faq-question">
+          <span>Will the fees count towards my deductible or out-of-pocket maximum?</span>
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+          <p>It depends. The fees you pay us don't automatically apply to your deductible since we don't bill your insurance. However, if you submit the superbill we provide to your insurer for out-of-network reimbursement, whether those payments count toward your deductible depends entirely on your specific plan—and reimbursement is never guaranteed. Check with your insurer before your visit.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          <span>Can I still use my HSA or FSA?</span>
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+          <p>Absolutely! We accept HSA (Health Savings Account) and FSA (Flexible Spending Account) cards. Most patients use these tax-advantaged accounts to pay for their care.</p>
+        </div>
+      </div>
+      
+      <div class="faq-item">
+        <div class="faq-question">
+          <span>Will I ever receive a surprise bill?</span>
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+          <p>Never. You will know exactly what you pay before you receive any service. We believe in complete transparency—no hidden fees, no bills arriving weeks later.</p>
+        </div>
+      </div>
+      
+
+      
+      <div class="faq-item">
+        <div class="faq-question">
+          <span>Do I need a referral?</span>
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+          <p>No referral needed. You can schedule directly with Dr. Clifford—same-day and next-day appointments are usually available.</p>
+        </div>
+      </div>
+      
+      <div class="faq-item">
+        <div class="faq-question">
+          <span>Do you accept Medicare or Medicaid?</span>
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+          <p>Pathways Foot & Ankle is a direct care practice and does not bill any insurance, including Medicare and Medicaid. Patients pay directly for services at the time of care.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- CTA Box -->
+    <div class="cta-box">
+      <h3>Ready to experience the difference?</h3>
+      <p>No waiting rooms full of people. No rushed 7-minute appointments. No insurance company telling you what treatments you can have.</p>
+      <a href="index.html#contact" class="btn-outline-light">Schedule Your Visit Today →</a>
+      <p style="margin-top: 20px; font-size: 0.85rem;"><i class="fas fa-phone"></i> Or call Dr. Clifford directly: <a href="tel:+19713595299" class="phone-link" style="color: white; text-decoration: none; border-bottom: 1px solid #438950;">(971) 359-5299</a></p>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="container">
+    <p><i class="fas fa-copyright"></i> 2026 Pathways Foot & Ankle. Oregon City, OR.</p>
+  </div>
+</footer>
+
+<!-- Scroll to Top Button -->
+<button class="scroll-top-btn" id="scrollToTopBtn" aria-label="Scroll to top">
+  <i class="fas fa-arrow-up"></i>
+</button>
+
+<script>
+  // Hamburger menu toggle
+  const hamburgerBtn = document.getElementById('hamburgerBtn');
+  const navLinks = document.getElementById('navLinks');
+  
+  if (hamburgerBtn && navLinks) {
+    hamburgerBtn.addEventListener('click', function() {
+      navLinks.classList.toggle('show');
+      const icon = hamburgerBtn.querySelector('i');
+      if (navLinks.classList.contains('show')) {
+        icon.classList.remove('fa-bars');
+        icon.classList.add('fa-times');
+      } else {
+        icon.classList.remove('fa-times');
+        icon.classList.add('fa-bars');
+      }
+    });
+  }
+
+  // FAQ Accordion
+  const faqItems = document.querySelectorAll('.faq-item');
+  faqItems.forEach(item => {
+    const question = item.querySelector('.faq-question');
+    question.addEventListener('click', () => {
+      item.classList.toggle('active');
+    });
+  });
+
+  // Scroll to top button
+  const scrollBtn = document.getElementById('scrollToTopBtn');
+  
+  function toggleScrollButton() {
+    if (!scrollBtn) return;
+    const scrolledPastThreshold = window.scrollY > 300;
+    
+    if (scrolledPastThreshold) {
+      scrollBtn.classList.add('show');
+    } else {
+      scrollBtn.classList.remove('show');
+    }
+  }
+  
+  function scrollToTop() {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  }
+  
+  window.addEventListener('scroll', toggleScrollButton);
+  window.addEventListener('resize', toggleScrollButton);
+  if (scrollBtn) scrollBtn.addEventListener('click', scrollToTop);
+  toggleScrollButton();
+</script>
+</body>
+</html>
