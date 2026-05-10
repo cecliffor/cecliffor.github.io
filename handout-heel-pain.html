@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Patient Handout: Heel Pain | Pathways Foot & Ankle</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&family=Rethink+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Font Awesome 6 (Free) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #F5F7F2;
+      font-family: 'Rethink Sans', 'Segoe UI', Helvetica, Arial, sans-serif;
+      color: #083104;
+      line-height: 1.5;
+      padding: 40px 20px;
+    }
+
+    /* Print-specific styles */
+    @media print {
+      body {
+        background-color: white;
+        padding: 0;
+        margin: 0;
+      }
+      .handout-container {
+        box-shadow: none;
+        margin: 0;
+        border-radius: 0;
+      }
+      .no-print {
+        display: none;
+      }
+      .print-footer {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        text-align: center;
+        font-size: 10px;
+        color: #999;
+        border-top: 1px solid #e0ecd9;
+        padding: 8px 0;
+        background: white;
+      }
+    }
+
+    .handout-container {
+      max-width: 1000px;
+      margin: 0 auto;
+      background: white;
+      border-radius: 24px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+      overflow: hidden;
+    }
+
+    /* Header */
+    .handout-header {
+      background: linear-gradient(135deg, #083104 0%, #0a4a0a 100%);
+      padding: 32px 40px;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .handout-title h1 {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+    .handout-title p {
+      opacity: 0.85;
+      font-size: 0.9rem;
+    }
+    .handout-logo {
+      text-align: right;
+    }
+    .handout-logo img {
+      height: 100px;
+      width: auto;
+    }
+    .handout-logo .logo-fallback {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: white;
+    }
+
+/* Floating Return to Homepage Button */
+.return-home-btn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 52px;
+  height: 52px;
+  background-color: #438950;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  transition: all 0.3s ease;
+  z-index: 1000;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  text-decoration: none;
+}
+.return-home-btn:hover {
+  background-color: #083104;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+  color: white;
+}
+@media (max-width: 640px) {
+  .return-home-btn {
+    bottom: 20px;
+    right: 20px;
+    width: 44px;
+    height: 44px;
+    font-size: 1.2rem;
+  }
+}
+@media print {
+  .return-home-btn {
+    display: none !important;
+  }
+}
+
+    /* Content */
+    .handout-content {
+      padding: 40px;
+    }
+
+    /* Section styling */
+    .section {
+      margin-bottom: 32px;
+    }
+    .section-title {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: #083104;
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      border-left: 4px solid #438950;
+      padding-left: 16px;
+    }
+    .section-title i {
+      color: #438950;
+      font-size: 1.3rem;
+    }
+
+    .info-box {
+      background: #F5F9F2;
+      border-radius: 20px;
+      padding: 24px;
+      margin: 24px 0;
+      border-left: 4px solid #438950;
+    }
+
+    .info-box h3 {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 1.1rem;
+      margin-bottom: 12px;
+      color: #083104;
+    }
+
+    /* Simple bullet list with check-circle */
+    .bullet-list {
+      list-style: none;
+      padding-left: 0;
+    }
+    .bullet-list li {
+      margin-bottom: 10px;
+      padding-left: 28px;
+      position: relative;
+    }
+    .bullet-list li i {
+      color: #438950;
+      position: absolute;
+      left: 0;
+      top: 3px;
+      font-size: 0.9rem;
+    }
+
+    /* Two-column layout */
+    .two-col {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 32px;
+      margin: 24px 0;
+    }
+    .col {
+      flex: 1;
+      min-width: 200px;
+    }
+
+    hr {
+      border: none;
+      border-top: 1px solid #e0ecd9;
+      margin: 24px 0;
+    }
+
+    .callout {
+      background: #083104;
+      color: white;
+      border-radius: 20px;
+      padding: 24px;
+      text-align: center;
+      margin: 32px 0;
+    }
+    .callout p {
+      margin-bottom: 12px;
+    }
+    .callout a {
+      color: #FFFFFF;
+      text-decoration: none;
+      font-weight: 600;
+      border-bottom: 1px solid #438950;
+    }
+
+    .print-footer {
+      text-align: center;
+      font-size: 0.7rem;
+      color: #8a9c7a;
+      padding: 16px 40px 24px;
+      border-top: 1px solid #e0ecd9;
+    }
+
+    @media (max-width: 640px) {
+      .handout-header {
+        flex-direction: column;
+        text-align: center;
+      }
+      .handout-logo {
+        text-align: center;
+      }
+      .handout-content {
+        padding: 24px;
+      }
+      .section-title {
+        font-size: 1.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="handout-container">
+  <!-- Header -->
+  <div class="handout-header">
+    <div class="handout-title">
+      <h1>Understanding Heel Pain</h1>
+      <p>Patient Information Guide | Pathways Foot & Ankle</p>
+    </div>
+    <div class="handout-logo">
+      <img src="PATHWAYS_FINAL_WHITE.png" alt="Pathways Foot & Ankle" onerror="this.style.display='none'; this.nextSibling.style.display='block';">
+      <div class="logo-fallback" style="display: none;">Pathways Foot & Ankle</div>
+    </div>
+  </div>
+
+  <!-- Content -->
+  <div class="handout-content">
+    
+    <!-- Introduction -->
+    <div class="section">
+      <div class="section-title">
+        <i class="fas fa-foot-print"></i>
+        <h2>Why does my heel hurt?</h2>
+      </div>
+      <p>Heel pain is one of the most common foot complaints we see. It can range from a dull ache to a sharp, stabbing sensation, especially with those first steps in the morning. The good news is that most heel pain resolves with conservative treatment—no surgery required.</p>
+    </div>
+
+    <!-- Common Causes -->
+    <div class="section">
+      <div class="section-title">
+        <i class="fas fa-stethoscope"></i>
+        <h2>Common Causes</h2>
+      </div>
+      <div class="two-col">
+        <div class="col">
+          <div class="info-box" style="margin-top: 0;">
+            <h3> Plantar Fasciitis</h3>
+            <p>Inflammation of the thick band of tissue (plantar fascia) that runs across the bottom of your foot. The most common cause of heel pain.</p>
+          </div>
+        </div>
+        <div class="col">
+          <div class="info-box" style="margin-top: 0;">
+            <h3> Achilles Tendinitis</h3>
+            <p>Inflammation of the Achilles tendon, connecting your calf muscles to your heel bone. Causes pain at the back of the heel.</p>
+          </div>
+        </div>
+      </div>
+      <div class="two-col">
+        <div class="col">
+          <div class="info-box" style="margin-top: 0;">
+            <h3></i> Heel Bursitis</h3>
+            <p>Inflammation of the fluid-filled sac (bursa) at the back of the heel, often from repetitive stress or poorly fitting shoes.</p>
+          </div>
+        </div>
+        <div class="col">
+          <div class="info-box" style="margin-top: 0;">
+            <h3></i> Heel Spurs</h3>
+            <p>A bony growth on the underside of the heel bone. Often associated with plantar fasciitis but rarely the source of pain itself.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Risk Factors -->
+    <div class="section">
+      <div class="section-title">
+        <i class="fas fa-exclamation-triangle"></i>
+        <h2>Risk Factors</h2>
+      </div>
+      <ul class="bullet-list">
+        <li><i class="fas fa-check-circle"></i> Running or jumping sports, especially on hard surfaces</li>
+        <li><i class="fas fa-check-circle"></i> Obesity or sudden weight gain</li>
+        <li><i class="fas fa-check-circle"></i> Poorly fitting shoes or worn-out athletic shoes</li>
+        <li><i class="fas fa-check-circle"></i> Occupations that require prolonged standing or walking</li>
+        <li><i class="fas fa-check-circle"></i> Flat feet or high arches</li>
+        <li><i class="fas fa-check-circle"></i> Tight calf muscles or Achilles tendon</li>
+      </ul>
+    </div>
+
+    <!-- Treatment Options -->
+    <div class="section">
+      <div class="section-title">
+        <i class="fas fa-heartbeat"></i>
+        <h2>Treatment Options</h2>
+      </div>
+      <p style="margin-bottom: 16px;">At Pathways Foot & Ankle, we always start with conservative, non-surgical treatments. Surgery is always a last resort.</p>
+      
+      <div class="two-col">
+        <div class="col">
+          <ul class="bullet-list">
+            <li><i class="fas fa-check-circle"></i> Proper footwear and arch support</li>
+            <li><i class="fas fa-check-circle"></i> Stretching exercises for the calf and plantar fascia</li>
+            <li><i class="fas fa-check-circle"></i> Custom orthotics to correct biomechanics</li>
+            <li><i class="fas fa-check-circle"></i> Functional medicine testing to uncover root causes (inflammation, nutrition, metabolism)</li>
+          </ul>
+        </div>
+        <div class="col">
+          <ul class="bullet-list">            
+            <li><i class="fas fa-check-circle"></i> Shockwave therapy to break up scar tissue</li>
+            <li><i class="fas fa-check-circle"></i> Laser therapy to reduce inflammation</li>
+            <li><i class="fas fa-check-circle"></i> Restorative and Regenerative injections</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- When to Seek Care -->
+    <div class="section">
+      <div class="section-title">
+        <i class="fas fa-clock"></i>
+        <h2>When to See a Specialist</h2>
+      </div>
+      <ul class="bullet-list">
+        <li><i class="fas fa-check-circle"></i> Pain that persists for more than 2 weeks despite home care</li>
+        <li><i class="fas fa-check-circle"></i> Pain that worsens or interferes with daily activities</li>
+        <li><i class="fas fa-check-circle"></i> Sharp, stabbing pain with your first steps in the morning</li>
+        <li><i class="fas fa-check-circle"></i> Numbness, tingling, or burning sensation in your foot</li>
+        <li><i class="fas fa-check-circle"></i> Signs of infection (redness, warmth, swelling, fever)</li>
+      </ul>
+    </div>
+
+    <!-- At-Home Care -->
+    <div class="info-box">
+      <h3><i class="fas fa-hand-holding-heart"></i> At-Home Care Tips</h3>
+      <ul class="bullet-list" style="margin-bottom: 0;">
+        <li><i class="fas fa-check-circle"></i> Ice the painful area for 15-20 minutes several times a day</li>
+        <li><i class="fas fa-check-circle"></i> Perform calf stretches before getting out of bed</li>
+        <li><i class="fas fa-check-circle"></i> Avoid walking barefoot on hard surfaces</li>
+        <li><i class="fas fa-check-circle"></i> Maintain a healthy weight to reduce stress on your feet</li>
+        <li><i class="fas fa-check-circle"></i> Replace athletic shoes every 300-500 miles</li>
+      </ul>
+    </div>
+
+    <!-- What to Expect at Pathways -->
+    <div class="section">
+      <div class="section-title">
+        <i class="fas fa-handshake"></i>
+        <h2>What to Expect at Pathways Foot & Ankle</h2>
+      </div>
+      <p>When you come to see Dr. Clifford, you can expect:</p>
+      <ul class="bullet-list" style="margin-top: 12px;">
+        <li><i class="fas fa-check-circle"></i> Unhurried appointments where you're truly heard</li>
+        <li><i class="fas fa-check-circle"></i> A thorough evaluation to find the root cause of your pain</li>
+        <li><i class="fas fa-check-circle"></i> Access to cutting-edge non-surgical treatments like shockwave and laser therapy</li>
+        <li><i class="fas fa-check-circle"></i> Transparent pricing with no surprise bills</li>
+        <li><i class="fas fa-check-circle"></i> Same-day or next-day appointments, no referral needed</li>
+      </ul>
+    </div>
+
+    <!-- Call to Action -->
+    <div class="callout">
+      <p><i class="fas fa-phone-alt" style="margin-right: 10px;"></i> <strong>Ready to find relief from your heel pain?</strong></p>
+      <p>Call Dr. Clifford directly at <a href="tel:+19713595299">(971) 359-5299</a> or visit <a href="https://www.pathwaysfoot.com" target="_blank" rel="noopener noreferrer"><strong>www.pathwaysfoot.com</strong></a> to schedule your appointment.</p>
+      <p style="font-size: 0.85rem; margin-top: 12px; opacity: 0.8;">216 14th St, Oregon City, OR 97045 | Same-day visits available</p>
+    </div>
+
+    <!-- Disclaimer -->
+    <div class="print-footer">
+      <p>This information is for educational purposes only and is not a substitute for professional medical advice. Always consult with a qualified healthcare provider for diagnosis and treatment of any medical condition.</p>
+      <p style="margin-top: 8px;">© 2026 Pathways Foot & Ankle | Dr. Craig E. Clifford, DPM, MHA | Board Certified Foot and Ankle Specialist</p>
+    </div>
+  </div>
+</div>
+
+<!-- Print button -->
+<div class="no-print" style="text-align: center; margin-top: 24px;">
+  <button onclick="window.print();" style="background-color: #083104; color: white; border: none; padding: 12px 28px; border-radius: 40px; font-family: 'DM Sans', sans-serif; font-weight: 600; cursor: pointer;">
+    <i class="fas fa-print"></i> Print or Save as PDF
+  </button>
+</div>
+
+<script>
+  // Handle logo fallback
+  const logoImg = document.querySelector('.handout-logo img');
+  if (logoImg) {
+    logoImg.onerror = function() {
+      this.style.display = 'none';
+      const fallback = this.nextElementSibling;
+      if (fallback) fallback.style.display = 'block';
+    };
+  }
+</script>
+<!-- Floating Return to Homepage Button -->
+<a href="index.html" class="return-home-btn" aria-label="Return to Homepage">
+  <i class="fas fa-reply"></i>
+</a>
+</body>
+</html>

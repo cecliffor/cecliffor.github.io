@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Patient Handout: Thick Toenails | Pathways Foot & Ankle</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&family=Rethink+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Font Awesome 6 (Free) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #F5F7F2;
+      font-family: 'Rethink Sans', 'Segoe UI', Helvetica, Arial, sans-serif;
+      color: #083104;
+      line-height: 1.5;
+      padding: 40px 20px;
+    }
+
+    @media print {
+      body {
+        background-color: white;
+        padding: 0;
+        margin: 0;
+      }
+      .handout-container {
+        box-shadow: none;
+        margin: 0;
+        border-radius: 0;
+      }
+      .no-print {
+        display: none;
+      }
+    }
+
+    .handout-container {
+      max-width: 1000px;
+      margin: 0 auto;
+      background: white;
+      border-radius: 24px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+      overflow: hidden;
+    }
+
+    .handout-header {
+      background: linear-gradient(135deg, #083104 0%, #0a4a0a 100%);
+      padding: 32px 40px;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .handout-title h1 {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+    .handout-title p {
+      opacity: 0.85;
+      font-size: 0.9rem;
+    }
+    .handout-logo {
+      text-align: right;
+    }
+    .handout-logo img {
+      height: 100px;
+      width: auto;
+    }
+    .handout-logo .logo-fallback {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: white;
+    }
+
+    .handout-content {
+      padding: 40px;
+    }
+
+    .section {
+      margin-bottom: 32px;
+    }
+    .section-title {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: #083104;
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      border-left: 4px solid #438950;
+      padding-left: 16px;
+    }
+    .section-title i {
+      color: #438950;
+      font-size: 1.3rem;
+    }
+
+    .info-box {
+      background: #F5F9F2;
+      border-radius: 20px;
+      padding: 24px;
+      margin: 24px 0;
+      border-left: 4px solid #438950;
+    }
+    .info-box h3 {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 1.1rem;
+      margin-bottom: 12px;
+      color: #083104;
+    }
+
+    .bullet-list {
+      list-style: none;
+      padding-left: 0;
+    }
+    .bullet-list li {
+      margin-bottom: 10px;
+      padding-left: 28px;
+      position: relative;
+    }
+    .bullet-list li i {
+      color: #438950;
+      position: absolute;
+      left: 0;
+      top: 3px;
+      font-size: 0.9rem;
+    }
+
+/* Floating Return to Homepage Button */
+.return-home-btn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 52px;
+  height: 52px;
+  background-color: #438950;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  transition: all 0.3s ease;
+  z-index: 1000;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  text-decoration: none;
+}
+.return-home-btn:hover {
+  background-color: #083104;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+  color: white;
+}
+@media (max-width: 640px) {
+  .return-home-btn {
+    bottom: 20px;
+    right: 20px;
+    width: 44px;
+    height: 44px;
+    font-size: 1.2rem;
+  }
+}
+@media print {
+  .return-home-btn {
+    display: none !important;
+  }
+}
+
+    .two-col {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 32px;
+      margin: 24px 0;
+    }
+    .col {
+      flex: 1;
+      min-width: 200px;
+    }
+
+    .callout {
+      background: #083104;
+      color: white;
+      border-radius: 20px;
+      padding: 24px;
+      text-align: center;
+      margin: 32px 0;
+    }
+    .callout p {
+      margin-bottom: 12px;
+    }
+    .callout a {
+      color: #FFFFFF;
+      text-decoration: none;
+      font-weight: 600;
+      border-bottom: 1px solid #438950;
+    }
+
+    .print-footer {
+      text-align: center;
+      font-size: 0.7rem;
+      color: #8a9c7a;
+      padding: 16px 40px 24px;
+      border-top: 1px solid #e0ecd9;
+    }
+
+    @media (max-width: 640px) {
+      .handout-header {
+        flex-direction: column;
+        text-align: center;
+      }
+      .handout-logo {
+        text-align: center;
+      }
+      .handout-content {
+        padding: 24px;
+      }
+      .section-title {
+        font-size: 1.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="handout-container">
+  <div class="handout-header">
+    <div class="handout-title">
+      <h1>Understanding Thick Toenails</h1>
+      <p>Patient Information Guide | Pathways Foot & Ankle</p>
+    </div>
+    <div class="handout-logo">
+      <img src="PATHWAYS_FINAL_WHITE.png" alt="Pathways Foot & Ankle" onerror="this.style.display='none'; this.nextSibling.style.display='block';">
+      <div class="logo-fallback" style="display: none;">Pathways Foot & Ankle</div>
+    </div>
+  </div>
+
+  <div class="handout-content">
+    
+    <!-- Introduction -->
+    <div class="section">
+      <div class="section-title">
+        <i class="fas fa-foot-print"></i>
+        <h2>Why are my toenails thick and discolored?</h2>
+      </div>
+      <p>Thick, yellow, or brittle toenails are often caused by a common fungal infection called <strong>onychomycosis</strong>. While not usually painful in the early stages, thick toenails can become uncomfortable, difficult to trim, and may lead to more serious problems—especially for those with diabetes or circulation issues.</p>
+    </div>
+
+    <!-- Causes -->
+    <div class="section">
+      <div class="section-title">
+        <i class="fas fa-microscope"></i>
+        <h2>What Causes It?</h2>
+      </div>
+      <p>Fungal infections thrive in warm, moist environments. The same fungi that cause athlete's foot can infect the toenail, leading to thickening, discoloration, and crumbling.</p>
+      <div class="info-box" style="margin-top: 16px;">
+        <h3><i class="fas fa-triangle-exclamation"></i> Common Risk Factors</h3>
+        <ul class="bullet-list" style="margin-bottom: 0;">
+          <li><i class="fas fa-check-circle"></i> Walking barefoot in public pools, gyms, or locker rooms</li>
+          <li><i class="fas fa-check-circle"></i> Wearing tight, non-breathable shoes for long periods</li>
+          <li><i class="fas fa-check-circle"></i> Trauma or repeated injury to the toenail</li>
+          <li><i class="fas fa-check-circle"></i> Diabetes, poor circulation, or a weakened immune system</li>
+          <li><i class="fas fa-check-circle"></i> Advancing age (nails grow slower and become more brittle)</li>
+          <li><i class="fas fa-check-circle"></i> Family history of fungal nail infections</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Signs & Symptoms -->
+    <div class="section">
+      <div class="section-title">
+        <i class="fas fa-list-ul"></i>
+        <h2>Signs to Watch For</h2>
+      </div>
+      <ul class="bullet-list">
+        <li><i class="fas fa-check-circle"></i> Thickening of the nail beyond normal</li>
+        <li><i class="fas fa-check-circle"></i> Yellow, brown, or white discoloration</li>
+        <li><i class="fas fa-check-circle"></i> Brittle, crumbly, or ragged nail edges</li>
+        <li><i class="fas fa-check-circle"></i> Darkening of the nail (caused by debris buildup)</li>
+        <li><i class="fas fa-check-circle"></i> Foul odor coming from the nail</li>
+        <li><i class="fas fa-check-circle"></i> Pain or discomfort when wearing shoes</li>
+        <li><i class="fas fa-check-circle"></i> Nail separating from the nail bed (onycholysis)</li>
+      </ul>
+    </div>
+
+    <!-- Treatment Options -->
+    <div class="section">
+      <div class="section-title">
+        <i class="fas fa-heartbeat"></i>
+        <h2>Treatment Options</h2>
+      </div>
+      <p style="margin-bottom: 16px;">At Pathways Foot & Ankle, we offer several effective treatments for thick toenails. The right option depends on the severity of the infection and your overall health.</p>
+      
+      <div class="two-col">
+        <div class="col">
+          <ul class="bullet-list">
+            <li><i class="fas fa-check-circle"></i> <strong>Laser Therapy</strong> – Painless laser energy safely heats and destroys the fungus without damaging the surrounding skin or nail. No needles, no anesthesia, no downtime.</li>
+            <li><i class="fas fa-check-circle"></i> <strong>Topical Antifungals</strong> – Prescription-strength nail lacquers applied directly to the nail. Best for mild to moderate infections.</li>
+          </ul>
+        </div>
+        <div class="col">
+          <ul class="bullet-list">
+            <li><i class="fas fa-check-circle"></i> <strong>Oral Antifungal Medications</strong> – Prescription pills that work from the inside out. Effective but require lab monitoring due to potential side effects.</li>
+            <li><i class="fas fa-check-circle"></i> <strong>Nail Debridement</strong> – In-office thinning and trimming of the thickened nail to reduce pressure, improve appearance, and allow topical treatments to penetrate better.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- At-Home Care -->
+    <div class="info-box">
+      <h3><i class="fas fa-hand-holding-heart"></i> At-Home Prevention & Care</h3>
+      <ul class="bullet-list" style="margin-bottom: 0;">
+        <li><i class="fas fa-check-circle"></i> Keep feet clean and dry, especially between the toes</li>
+        <li><i class="fas fa-check-circle"></i> Wear moisture-wicking socks and change them daily</li>
+        <li><i class="fas fa-check-circle"></i> Choose breathable shoes (leather or mesh instead of synthetic)</li>
+        <li><i class="fas fa-check-circle"></i> Wear flip-flops or shower shoes in public pools, gyms, and locker rooms</li>
+        <li><i class="fas fa-check-circle"></i> Disinfect nail clippers after each use</li>
+        <li><i class="fas fa-check-circle"></i> Avoid sharing nail clippers, files, or shoes with others</li>
+        <li><i class="fas fa-check-circle"></i> Replace old shoes that may harbor fungus (or use antifungal shoe sprays)</li>
+      </ul>
+    </div>
+
+    <!-- When to Seek Care -->
+    <div class="section">
+      <div class="section-title">
+        <i class="fas fa-clock"></i>
+        <h2>When to See a Specialist</h2>
+      </div>
+      <ul class="bullet-list">
+        <li><i class="fas fa-check-circle"></i> The nail has become painful or difficult to trim</li>
+        <li><i class="fas fa-check-circle"></i> Over-the-counter treatments haven't worked after several months</li>
+        <li><i class="fas fa-check-circle"></i> You have diabetes, circulation problems, or a weakened immune system</li>
+        <li><i class="fas fa-check-circle"></i> The nail is separating from the nail bed</li>
+        <li><i class="fas fa-check-circle"></i> You notice redness, swelling, warmth, or drainage (possible infection)</li>
+      </ul>
+    </div>
+
+    <!-- What to Expect at Pathways -->
+    <div class="section">
+      <div class="section-title">
+        <i class="fas fa-handshake"></i>
+        <h2>What to Expect at Pathways Foot & Ankle</h2>
+      </div>
+      <p>When you come to see Dr. Clifford for thick toenails, you can expect:</p>
+      <ul class="bullet-list" style="margin-top: 12px;">
+        <li><i class="fas fa-check-circle"></i> A thorough examination to confirm the diagnosis (sometimes including a nail clipping sent to a lab)</li>
+        <li><i class="fas fa-check-circle"></i> A clear explanation of all treatment options, including benefits and risks</li>
+        <li><i class="fas fa-check-circle"></i> Access to painless laser therapy—no needles, no downtime</li>
+        <li><i class="fas fa-check-circle"></i> In-office nail debridement for immediate relief</li>
+        <li><i class="fas fa-check-circle"></i> Transparent pricing with no surprise bills</li>
+        <li><i class="fas fa-check-circle"></i> Same-day or next-day appointments, no referral needed</li>
+      </ul>
+    </div>
+
+    <!-- Important Note for Diabetics -->
+    <div class="info-box" style="background: #FFF8E7; border-left-color: #e6a017;">
+      <h3><i class="fas fa-exclamation-triangle" style="color: #e6a017;"></i> Special Note for Diabetics</h3>
+      <p style="margin-bottom: 0;">If you have diabetes, even a minor foot problem can become serious. Never attempt to trim thick or ingrown toenails yourself. See a podiatrist for professional nail care to prevent ulcers, infections, and complications.</p>
+    </div>
+
+    <!-- Call to Action -->
+    <div class="callout">
+      <p><i class="fas fa-phone-alt" style="margin-right: 10px;"></i> <strong>Ready to restore healthy-looking nails?</strong></p>
+      <p>Call Dr. Clifford directly at <a href="tel:+19713595299">(971) 359-5299</a> or visit <a href="https://www.pathwaysfoot.com" target="_blank" rel="noopener noreferrer"><strong>www.pathwaysfoot.com</strong></a> to schedule your appointment.</p>
+      <p style="font-size: 0.85rem; margin-top: 12px; opacity: 0.8;">216 14th St, Oregon City, OR 97045 | Same-day visits available</p>
+    </div>
+
+    <!-- Disclaimer -->
+    <div class="print-footer">
+      <p>This information is for educational purposes only and is not a substitute for professional medical advice. Always consult with a qualified healthcare provider for diagnosis and treatment of any medical condition.</p>
+      <p style="margin-top: 8px;">© 2026 Pathways Foot & Ankle | Dr. Craig E. Clifford, DPM, MHA | Board Certified Foot and Ankle Specialist</p>
+    </div>
+  </div>
+</div>
+
+<!-- Print button -->
+<div class="no-print" style="text-align: center; margin-top: 24px;">
+  <button onclick="window.print();" style="background-color: #083104; color: white; border: none; padding: 12px 28px; border-radius: 40px; font-family: 'DM Sans', sans-serif; font-weight: 600; cursor: pointer;">
+    <i class="fas fa-print"></i> Print or Save as PDF
+  </button>
+</div>
+
+<script>
+  const logoImg = document.querySelector('.handout-logo img');
+  if (logoImg) {
+    logoImg.onerror = function() {
+      this.style.display = 'none';
+      const fallback = this.nextElementSibling;
+      if (fallback) fallback.style.display = 'block';
+    };
+  }
+</script>
+<!-- Floating Return to Homepage Button -->
+<a href="index.html" class="return-home-btn" aria-label="Return to Homepage">
+  <i class="fas fa-reply"></i>
+</a>
+</body>
+</html>
