@@ -50,34 +50,33 @@
     }
 
     /* ========== HEADER WITH LOGO & HAMBURGER MENU ========== */
-    /* ========== HEADER WITH LOGO & HAMBURGER MENU ========== */
     .site-header {
-    background: #FFFFFF;
-    border-bottom: 1px solid #e0ecd9;
-    padding: 8px 0;  /* Reduced from 12px to 8px */
-    position: static;
-    width: 100%;
-    background: #FFFFFF;
+      background: #FFFFFF;
+      border-bottom: 1px solid #e0ecd9;
+      padding: 8px 0;
+      position: static;
+      width: 100%;
+      background: #FFFFFF;
     }
 
     .header-flex {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 18px;
     }
 
-    /* Logo image styling - made larger */
+    /* Logo image styling */
     .logo-img {
-    height: 100px;  /* Increased from 60px to 100px */
-    width: auto;
-    display: block;
+      height: 100px;
+      width: auto;
+      display: block;
     }
     @media (max-width: 780px) {
-    .logo-img {
-        height: 60px;  /* Increased from 50px to 60px on mobile */
-    }
+      .logo-img {
+        height: 60px;
+      }
     }
 
     /* Desktop navigation */
@@ -106,6 +105,22 @@
     }
     .btn-request-nav:hover {
       background-color: #438950;
+    }
+
+    /* Responsive calendar button styles */
+    .calendar-btn-desktop {
+      display: inline-block;
+    }
+    .calendar-btn-mobile {
+      display: none;
+    }
+    @media (max-width: 780px) {
+      .calendar-btn-desktop {
+        display: none;
+      }
+      .calendar-btn-mobile {
+        display: inline-block;
+      }
     }
 
     /* Hamburger menu button - hidden on desktop */
@@ -185,7 +200,7 @@
 
     /* feature strip */
     .features-strip {
-      background-color: rgba(245, 249, 242, 0.85); /* 85% opacity */
+      background-color: rgba(245, 249, 242, 0.85);
       padding: 36px 28px;
       border-radius: 48px;
       margin: 24px auto;
@@ -293,7 +308,7 @@
       display: flex;
       flex-wrap: wrap;
       gap: 32px;
-      background: rgba(255, 255, 255, 0.88); /* 88% opacity */
+      background: rgba(255, 255, 255, 0.88);
       border-radius: 48px;
       padding: 40px 32px;
       margin: 48px 0;
@@ -589,32 +604,39 @@
       <a href="#services"><i class="fas fa-stethoscope"></i> Services</a>
       <a href="#about"><i class="fas fa-user-md"></i> Dr. Clifford</a>
       <a href="#contact"><i class="fas fa-map-marker-alt"></i> Contact</a>
-      <!-- Google Calendar Appointment Scheduling begin -->
-      <link href="https://calendar.google.com/calendar/scheduling-button-script.css" rel="stylesheet">
-      <script src="https://calendar.google.com/calendar/scheduling-button-script.js" async></script>
-      <script>
-          (function() {
-          var target = document.currentScript;
-          window.addEventListener('load', function() {
-              calendar.schedulingButton.load({
-              url: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ16SPDk0mzDfLBAUjFxc_pV5OqAn2F4hzFjKW5druhPjwGx7-KqRKUS8gtjvqzfRtq1tW5UQuNX?gv=true',
-              color: '#083104',
-              label: 'Request Appointment',
-              target,
-              });
-          });
-          })();
-      </script>
-      <!-- end Google Calendar Appointment Scheduling -->
+      
+      <!-- Desktop version - popup button -->
+      <div class="calendar-btn-desktop">
+        <link href="https://calendar.google.com/calendar/scheduling-button-script.css" rel="stylesheet">
+        <script src="https://calendar.google.com/calendar/scheduling-button-script.js" async></script>
+        <script>
+            (function() {
+            var target = document.currentScript;
+            window.addEventListener('load', function() {
+                calendar.schedulingButton.load({
+                url: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ16SPDk0mzDfLBAUjFxc_pV5OqAn2F4hzFjKW5druhPjwGx7-KqRKUS8gtjvqzfRtq1tW5UQuNX?gv=true',
+                color: '#083104',
+                label: 'Request Appointment',
+                target,
+                });
+            });
+            })();
+        </script>
+      </div>
+      
+      <!-- Mobile version - direct link -->
+      <div class="calendar-btn-mobile">
+        <a href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ16SPDk0mzDfLBAUjFxc_pV5OqAn2F4hzFjKW5druhPjwGx7-KqRKUS8gtjvqzfRtq1tW5UQuNX?gv=true" target="_blank" rel="noopener noreferrer" style="background-color: #083104; padding: 8px 20px; border-radius: 40px; color: white; text-decoration: none; font-family: 'DM Sans', sans-serif; font-weight: 700; font-size: 0.95rem; display: inline-flex; align-items: center; gap: 8px;">
+          <i class="fas fa-calendar-check"></i> Request Appointment
+        </a>
+      </div>
     </div>
   </div>
 </header>
 
 <main>
-  <!-- Top section with background image - extended halfway between hero end and conditions start -->
+  <!-- Top section with background image -->
   <div class="top-bg-wrapper" style="background-image: url('header.jpeg'); background-size: cover; background-position: center center; background-repeat: no-repeat; position: relative;">
-    <!-- Subtle overlay for readability -->
-    
     <div style="position: relative; z-index: 1;">
       <!-- Hero -->
       <div class="container hero">
@@ -645,11 +667,10 @@
         </div>
       </div>
       
-      <!-- Extra spacer to extend background halfway to conditions section -->
+      <!-- Extra spacer -->
       <div style="height: 80px;"></div>
     </div>
   </div>
-  <!-- End of background image section -->
 
   <!-- Conditions Treated -->
   <section>
@@ -711,31 +732,16 @@
       <h2 class="section-title" id="services"><i class="fas fa-microscope"></i> Advanced In-Office Care & Services</h2>
       <div class="services-grid">
         <div class="service-card"><i class="fa-solid fa-dna"></i><h3>Functional Medicine</h3><p>Foot problems often stem from whole-body inflammation, metabolic issues, or nutritional deficiencies. Functional medicine testing treats the root cause — not just symptoms.</p></div>
-
         <div class="service-card"><i class="fa-regular fa-circle-dot"></i><h3>Diagnostic Ultrasound</h3><p>Painless, radiation-free imaging of tendons, ligaments, and nerves. Ideal for diagnosing plantar fasciitis, tendon tears, neuromas, and cysts.</p></div>
-
         <div class="service-card"><i class="fa-solid fa-shoe-prints"></i><h3>Custom Orthotics</h3><p>Prescription devices made specifically for your feet. Correct your unique biomechanics, relieve pressure points, and prevent reinjury.</p></div>
-
         <div class="service-card"><i class="fa-solid fa-wave-square"></i><h3>Shockwave Therapy</h3><p>Non-invasive sound waves stimulate healing for plantar fasciitis, neuropathy, neuromas, and Achilles tendinitis. No needles, no downtime. Typically 3-5 sessions.</p></div>
-
-
-
         <div class="service-card"><i class="fa-solid fa-xmark"></i><h3>Toenail Removal</h3><p>Safe in-office removal for infected, ingrown, thickened, or painful nails. Quick procedure that can be made permanent.</p></div>
-
         <div class="service-card"><i class="fa-solid fa-syringe"></i><h3>Cortisone Injections</h3><p>Powerful anti-inflammatory shot for arthritis, tendinitis, and plantar fasciitis. Relief begins within days and lasts weeks to months.</p></div>
-
-        
-
         <div class="service-card"><i class="fa-solid fa-syringe"></i><h3>Prolotherapy</h3><p>An irritant solution injected into weakened ligaments or tendons triggers natural healing. Especially effective for ankle instability, plantar fasciitis, and unresolved sprains.</p></div>
-
         <div class="service-card"><i class="fa-brands fa-pagelines"></i><h3>Homeopathic Injection Therapy</h3><p>A gentle, plant-based alternative to corticosteroids. Reduces inflammation, breaks up scar tissue, and relieves nerve pain without side effects.</p></div>
-
         <div class="service-card"><i class="fa-solid fa-scissors"></i><h3>Routine Nail and Callus Care</h3><p>Medical assessment and treatment of thick, fungal, or deformed nails and painful calluses to restore comfort and mobility. Ideal for diabetics and seniors.</p></div>
-
         <div class="service-card"><i class="fa-solid fa-bolt"></i><h3>Laser Therapy for Pain & Inflammation</h3><p>Painless light energy reduces inflammation, stimulates cell repair, and improves blood flow. Effective for arthritis, tendonitis, neuropathy, and sports injuries. 3–6 sessions.</p></div>
-
         <div class="service-card"><i class="fa-solid fa-bacteria"></i><h3>Laser Therapy for Toenail Fungus</h3><p>Specialized laser safely destroys toenail fungus without damaging skin or nail. Painless, no needles, no anesthesia, no downtime.</p></div>
-
         <div class="service-card"><i class="fa-solid fa-kit-medical"></i><h3>Minimally Invasive Surgery</h3><p>Small incisions (less than 1 cm) correct bunions, hammertoes, and neuromas. Less pain, faster recovery, and no large scars.</p></div>
       </div>
       <div style="margin-top: 38px; text-align: center;">
@@ -785,21 +791,31 @@
           <p><i class="fas fa-phone"></i> <a href="tel:+19713595299">(971) 359-5299</a> — Call Dr. Clifford directly</p>
           <p><i class="fas fa-calendar-alt"></i> Same-day & next-day appointments available, no referral needed</p>
           <div style="margin-top: 28px; display: flex; flex-wrap: wrap; gap: 14px;">
-            <link href="https://calendar.google.com/calendar/scheduling-button-script.css" rel="stylesheet">
-            <script src="https://calendar.google.com/calendar/scheduling-button-script.js" async></script>
-            <script>
-                (function() {
-                var target = document.currentScript;
-                window.addEventListener('load', function() {
-                    calendar.schedulingButton.load({
-                    url: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ16SPDk0mzDfLBAUjFxc_pV5OqAn2F4hzFjKW5druhPjwGx7-KqRKUS8gtjvqzfRtq1tW5UQuNX?gv=true',
-                    color: '#FFFFFF',
-                    label: 'Request Appointment',
-                    target,
-                    });
-                });
-                })();
-            </script>
+            <!-- Desktop version - popup button -->
+            <div class="calendar-btn-desktop">
+              <link href="https://calendar.google.com/calendar/scheduling-button-script.css" rel="stylesheet">
+              <script src="https://calendar.google.com/calendar/scheduling-button-script.js" async></script>
+              <script>
+                  (function() {
+                  var target = document.currentScript;
+                  window.addEventListener('load', function() {
+                      calendar.schedulingButton.load({
+                      url: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ16SPDk0mzDfLBAUjFxc_pV5OqAn2F4hzFjKW5druhPjwGx7-KqRKUS8gtjvqzfRtq1tW5UQuNX?gv=true',
+                      color: '#FFFFFF',
+                      label: 'Request Appointment',
+                      target,
+                      });
+                  });
+                  })();
+              </script>
+            </div>
+            
+            <!-- Mobile version - direct link -->
+            <div class="calendar-btn-mobile">
+              <a href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ16SPDk0mzDfLBAUjFxc_pV5OqAn2F4hzFjKW5druhPjwGx7-KqRKUS8gtjvqzfRtq1tW5UQuNX?gv=true" target="_blank" rel="noopener noreferrer" style="background-color: #FFFFFF; padding: 12px 28px; border-radius: 60px; color: #083104; text-decoration: none; font-family: 'DM Sans', sans-serif; font-weight: 700; font-size: 1rem; display: inline-flex; align-items: center; gap: 8px; border: none; cursor: pointer;">
+                <i class="fas fa-calendar-check"></i> Request Appointment
+              </a>
+            </div>
           </div>
         </div>
         <div style="min-width: 220px; flex: 1;">
@@ -832,7 +848,6 @@
   if (hamburgerBtn && navLinks) {
     hamburgerBtn.addEventListener('click', function() {
       navLinks.classList.toggle('show');
-      // Change icon between bars and times
       const icon = hamburgerBtn.querySelector('i');
       if (navLinks.classList.contains('show')) {
         icon.classList.remove('fa-bars');
