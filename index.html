@@ -625,19 +625,28 @@
 <body>
 
 <!-- Top Utility Bar - Dark Green with Contact Info -->
-<div style="background-color: #083104; height: 44px; width: 100%; display: flex; align-items: center; justify-content: center; padding: 0 28px; gap: 32px; flex-wrap: wrap; position: relative; z-index: 100;">
-  <a href="tel:+19713595299" style="color: white; text-decoration: none; font-family: 'DM Sans', sans-serif; font-size: 0.85rem; display: flex; align-items: center; gap: 8px; transition: opacity 0.2s;">
-    <i class="fas fa-phone-alt" style="color: #438950; font-size: 0.85rem;"></i> (971) 359-5299
-  </a>
-  <a href="https://www.google.com/maps/search/216+14th+St+Oregon+City+OR+97045" target="_blank" rel="noopener noreferrer" style="color: white; text-decoration: none; font-family: 'DM Sans', sans-serif; font-size: 0.85rem; display: flex; align-items: center; gap: 8px; transition: opacity 0.2s;">
-    <i class="fas fa-map-marker-alt" style="color: #438950; font-size: 0.85rem;"></i> Pathways Foot & Ankle - 216 14th St, Oregon City, OR 97045
-  </a>
+<div style="background-color: #083104; width: 100%; position: relative; z-index: 100;">
+  <div style="display: flex; align-items: center; justify-content: center; padding: 0 28px; gap: 32px; flex-wrap: wrap; min-height: 44px;">
+    <a href="tel:+19713595299" style="color: white; text-decoration: none; font-family: 'DM Sans', sans-serif; font-size: 0.85rem; display: flex; align-items: center; gap: 8px; transition: opacity 0.2s; white-space: nowrap;">
+      <i class="fas fa-phone-alt" style="color: #438950; font-size: 0.85rem;"></i> (971) 359-5299
+    </a>
+    <a href="https://www.google.com/maps/search/216+14th+St+Oregon+City+OR+97045" target="_blank" rel="noopener noreferrer" style="color: white; text-decoration: none; font-family: 'DM Sans', sans-serif; font-size: 0.85rem; display: flex; align-items: center; gap: 8px; transition: opacity 0.2s; text-align: center;">
+      <i class="fas fa-map-marker-alt" style="color: #438950; font-size: 0.85rem;"></i> Pathways Foot & Ankle - 216 14th St, Oregon City, OR 97045
+    </a>
+  </div>
 </div>
 <style>
   @media (max-width: 640px) {
-    div[style*="background-color: #083104"] {
-      gap: 20px !important;
-      padding: 0 16px !important;
+    div[style*="background-color: #083104"] > div {
+      flex-direction: column !important;
+      gap: 8px !important;
+      padding: 8px 16px !important;
+      min-height: auto !important;
+    }
+    div[style*="background-color: #083104"] a {
+      white-space: normal !important;
+      text-align: center !important;
+      justify-content: center !important;
     }
   }
 </style>
