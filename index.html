@@ -158,22 +158,6 @@
       background-color: #438950;
     }
 
-    /* Responsive calendar button styles */
-    .calendar-btn-desktop {
-      display: inline-block;
-    }
-    .calendar-btn-mobile {
-      display: none;
-    }
-    @media (max-width: 780px) {
-      .calendar-btn-desktop {
-        display: none;
-      }
-      .calendar-btn-mobile {
-        display: inline-block;
-      }
-    }
-
     /* Hamburger menu button - hidden on desktop */
     .hamburger {
       display: none;
@@ -665,32 +649,10 @@
       <a href="#about"><i class="fas fa-user-md"></i> About</a>
       <a href="#contact"><i class="fas fa-map-marker-alt"></i> Contact</a>
       <a href="https://forms.gle/Y1WrzTN6Md8n541m6"><i class="fa-solid fa-pen-to-square"></i> Intake Forms</a>
-      
-      <!-- Desktop version - popup button -->
-      <div class="calendar-btn-desktop">
-        <link href="https://calendar.google.com/calendar/scheduling-button-script.css" rel="stylesheet">
-        <script src="https://calendar.google.com/calendar/scheduling-button-script.js" async></script>
-        <script>
-            (function() {
-            var target = document.currentScript;
-            window.addEventListener('load', function() {
-                calendar.schedulingButton.load({
-                url: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ16SPDk0mzDfLBAUjFxc_pV5OqAn2F4hzFjKW5druhPjwGx7-KqRKUS8gtjvqzfRtq1tW5UQuNX?gv=true',
-                color: '#083104',
-                label: 'Request Appointment',
-                target,
-                });
-            });
-            })();
-        </script>
-      </div>
-      
-      <!-- Mobile version - direct link -->
-      <div class="calendar-btn-mobile">
-        <a href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ16SPDk0mzDfLBAUjFxc_pV5OqAn2F4hzFjKW5druhPjwGx7-KqRKUS8gtjvqzfRtq1tW5UQuNX?gv=true" target="_blank" rel="noopener noreferrer" style="background-color: #083104; padding: 8px 20px; border-radius: 40px; color: white; text-decoration: none; font-family: 'DM Sans', sans-serif; font-weight: 700; font-size: 0.95rem; display: inline-flex; align-items: center; gap: 8px;">
-          <i class="fas fa-calendar-check"></i> Request Appointment
-        </a>
-      </div>
+      <!-- ZocDoc Scheduling Button -->
+      <a href="https://us-74451.email-composer-webhooks.gong.io/email-tracking/clicked?email-info-token=eyJhbGciOiJIUzI1NiJ9.eyJjb21wYW55SWQiOiIxMzIxMTY2NDAzNzM2Njc3OTI5IiwiZHJhZnRJZCI6InItNzk3MjA3MDkxODQ2MjUzNzQ5MiIsImxpbmtVcmwiOiJodHRwczovL3d3dy56b2Nkb2MuY29tL3ByYWN0aWNlL3BhdGh3YXlzLWZvb3QtYW5kLWFua2xlLTE4MDQ5OD9sb2NrPXRydWUmaXNOZXdQYXRpZW50PWZhbHNlJnJlZmVycmVyVHlwZT13aWRnZXQiLCJsaW5rVGV4dCI6Imh0dHBzOi8vd3d3LnpvY2RvYy5jb20vcHJhY3RpY2UvcGF0aHdheXMtZm9vdC1hbmQtYW5rbGUtMTgwNDk4P2xvY2s9dHJ1ZSZpc05ld1BhdGllbnQ9ZmFsc2UmcmVmZXJyZXJUeXBlPXdpZGdldCIsInRlbXBsYXRlSWQiOiIiLCJleHAiOjE3ODIzMjExNDUsImlhdCI6MTc4MDUwNjc0NSwianRpIjoiTzV4dEVMRytoUGdDIn0.Q5rhm5wXvKjpkK0SCFxvp86y7Vkfz1lWIz9gcrQXVWQ" target="_blank" rel="noopener noreferrer" style="background-color: #083104; padding: 8px 20px; border-radius: 40px; color: white !important; text-decoration: none; font-family: 'DM Sans', sans-serif; font-weight: 700; font-size: 0.95rem; display: inline-flex; align-items: center; gap: 8px;">
+      <i class="fas fa-calendar-check"></i> Request Appointment
+      </a>
     </div>
   </div>
 </header>
@@ -857,31 +819,10 @@
           <p><i class="fas fa-phone"></i> <a href="tel:+19713595299">(971) 359-5299</a> — Call Dr. Clifford directly</p>
           <p><i class="fas fa-calendar-alt"></i> Same-day & next-day appointments available, no referral needed</p>
           <div style="margin-top: 28px; display: flex; flex-wrap: wrap; gap: 14px;">
-            <!-- Desktop version - popup button -->
-            <div class="calendar-btn-desktop">
-              <link href="https://calendar.google.com/calendar/scheduling-button-script.css" rel="stylesheet">
-              <script src="https://calendar.google.com/calendar/scheduling-button-script.js" async></script>
-              <script>
-                  (function() {
-                  var target = document.currentScript;
-                  window.addEventListener('load', function() {
-                      calendar.schedulingButton.load({
-                      url: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ16SPDk0mzDfLBAUjFxc_pV5OqAn2F4hzFjKW5druhPjwGx7-KqRKUS8gtjvqzfRtq1tW5UQuNX?gv=true',
-                      color: '#FFFFFF',
-                      label: 'Request Appointment',
-                      target,
-                      });
-                  });
-                  })();
-              </script>
-            </div>
-            
-            <!-- Mobile version - direct link -->
-            <div class="calendar-btn-mobile">
-              <a href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ16SPDk0mzDfLBAUjFxc_pV5OqAn2F4hzFjKW5druhPjwGx7-KqRKUS8gtjvqzfRtq1tW5UQuNX?gv=true" target="_blank" rel="noopener noreferrer" style="background-color: #FFFFFF; padding: 12px 28px; border-radius: 60px; color: #083104; text-decoration: none; font-family: 'DM Sans', sans-serif; font-weight: 700; font-size: 1rem; display: inline-flex; align-items: center; gap: 8px; border: none; cursor: pointer;">
-                <i class="fas fa-calendar-check"></i> Request Appointment
-              </a>
-            </div>
+            <!-- ZocDoc Scheduling Button -->
+	    <a href="https://us-74451.email-composer-webhooks.gong.io/email-tracking/clicked?email-info-token=eyJhbGciOiJIUzI1NiJ9.eyJjb21wYW55SWQiOiIxMzIxMTY2NDAzNzM2Njc3OTI5IiwiZHJhZnRJZCI6InItNzk3MjA3MDkxODQ2MjUzNzQ5MiIsImxpbmtVcmwiOiJodHRwczovL3d3dy56b2Nkb2MuY29tL3ByYWN0aWNlL3BhdGh3YXlzLWZvb3QtYW5kLWFua2xlLTE4MDQ5OD9sb2NrPXRydWUmaXNOZXdQYXRpZW50PWZhbHNlJnJlZmVycmVyVHlwZT13aWRnZXQiLCJsaW5rVGV4dCI6Imh0dHBzOi8vd3d3LnpvY2RvYy5jb20vcHJhY3RpY2UvcGF0aHdheXMtZm9vdC1hbmQtYW5rbGUtMTgwNDk4P2xvY2s9dHJ1ZSZpc05ld1BhdGllbnQ9ZmFsc2UmcmVmZXJyZXJUeXBlPXdpZGdldCIsInRlbXBsYXRlSWQiOiIiLCJleHAiOjE3ODIzMjExNDUsImlhdCI6MTc4MDUwNjc0NSwianRpIjoiTzV4dEVMRytoUGdDIn0.Q5rhm5wXvKjpkK0SCFxvp86y7Vkfz1lWIz9gcrQXVWQ" target="_blank" rel="noopener noreferrer" style="background-color: #FFFFFF; padding: 12px 28px; border-radius: 60px; color: #083104; text-decoration: none; font-family: 'DM Sans', sans-serif; font-weight: 700; font-size: 1rem; display: inline-flex; align-items: center; gap: 8px; border: none; cursor: pointer;">
+  	    <i class="fas fa-calendar-check"></i> Request Appointment
+	    </a>
           </div>
         </div>
         <div style="min-width: 220px; flex: 1;">
