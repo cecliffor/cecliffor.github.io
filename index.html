@@ -603,6 +603,51 @@
     a, button {
       transition: all 0.2s ease;
     }
+
+    /* ========== BACKGROUND SLIDESHOW STYLES ========== */
+    .top-bg-wrapper {
+      position: relative;
+      min-height: 700px;
+      overflow: hidden;
+    }
+
+    .bg-slideshow {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+    }
+
+    .bg-slide {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+      opacity: 0;
+      transition: opacity 1.5s ease-in-out;
+    }
+
+    .bg-slide.active {
+      opacity: 1;
+    }
+
+    @media (max-width: 780px) {
+      .top-bg-wrapper {
+        min-height: 600px;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .top-bg-wrapper {
+        min-height: 550px;
+      }
+    }
   </style>
 </head>
 
@@ -651,16 +696,34 @@
       <a href="https://forms.gle/Y1WrzTN6Md8n541m6"><i class="fa-solid fa-pen-to-square"></i> Intake Forms</a>
       <!-- ZocDoc Scheduling Button -->
       <a href="https://www.zocdoc.com/practice/pathways-foot-and-ankle-180498?lock=true&isNewPatient=false&referrerType=widget" target="_blank" rel="noopener noreferrer" style="background-color: #083104; padding: 8px 20px; border-radius: 40px; color: white !important; text-decoration: none; font-family: 'DM Sans', sans-serif; font-weight: 700; font-size: 0.95rem; display: inline-flex; align-items: center; gap: 8px;">
-      <i class="fas fa-calendar-check"></i> Request Appointment
+        <i class="fas fa-calendar-check"></i> Request Appointment
       </a>
     </div>
   </div>
 </header>
 
 <main>
-  <!-- Top section with background image -->
-  <div class="top-bg-wrapper" style="background-image: url('img/header.jpeg'); background-size: cover; background-position: center center; background-repeat: no-repeat; position: relative;">
-    <div style="position: relative; z-index: 1;">
+  <!-- Top section with rotating background slideshow -->
+  <div class="top-bg-wrapper">
+    
+    <!-- Background Slideshow Images -->
+    <div class="bg-slideshow">
+      <div class="bg-slide" style="background-image: url('img/20260604_164247.jpg');"></div>
+      <div class="bg-slide" style="background-image: url('img/20260604_164318.jpg');"></div>
+      <div class="bg-slide" style="background-image: url('img/20260604_164432.jpg');"></div>
+      <div class="bg-slide" style="background-image: url('img/20260604_164601.jpg');"></div>
+      <div class="bg-slide" style="background-image: url('img/20260604_164612.jpg');"></div>
+      <div class="bg-slide" style="background-image: url('img/20260604_164621.jpg');"></div>
+      <div class="bg-slide" style="background-image: url('img/20260604_164636.jpg');"></div>
+      <div class="bg-slide" style="background-image: url('img/20260604_164716.jpg');"></div>
+      <div class="bg-slide" style="background-image: url('img/20260604_164947.jpg');"></div>
+      <div class="bg-slide" style="background-image: url('img/20260604_165021.jpg');"></div>
+    </div>
+    
+    <!-- Overlay for text readability (adjust opacity as needed) -->
+    <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(255, 255, 255, 0.80); z-index: 1;"></div>
+    
+    <div style="position: relative; z-index: 2;">
       <!-- Hero -->
       <div class="container hero">
         <div class="hero-grid">
@@ -768,8 +831,6 @@
         <div class="service-card"><i class="fa-solid fa-syringe"></i><h3>Cortisone Injections</h3><p>Powerful anti-inflammatory shot for arthritis, tendinitis, and plantar fasciitis. Relief begins within days and lasts weeks to months.</p></div>
         <div class="service-card"><i class="fas fa-vial"></i><h3>Regenerative Injection Therapy</h3><p>Reduces inflammation while healing, not just masking symptoms. Options include prolotherapy, Regenerative Protein Array (RPA), and homeopathic injectables (Traumeel®, Zeel®, Injeel®) — natural alternatives to corticosteroids without the side effects. Ideal for chronic tendinitis, plantar fasciitis, arthritis, and nerve pain.</p></div>
         <div class="service-card"><i class="fa-solid fa-scissors"></i><h3>Routine Nail and Callus Care</h3><p>Medical assessment and treatment of thick, fungal, or deformed nails and painful calluses to restore comfort and mobility. Ideal for diabetics and seniors.</p></div>
-        <!--<div class="service-card"><i class="fa-solid fa-bolt"></i><h3>Laser Therapy for Pain & Inflammation</h3><p>Painless light energy reduces inflammation, stimulates cell repair, and improves blood flow. Effective for arthritis, tendonitis, neuropathy, and sports injuries. 3–6 sessions.</p></div>-->
-        <!--<div class="service-card"><i class="fa-solid fa-bacteria"></i><h3>Laser Therapy for Toenail Fungus</h3><p>Specialized laser safely destroys toenail fungus without damaging skin or nail. Painless, no needles, no anesthesia, no downtime.</p></div>-->
         <div class="service-card"><i class="fa-solid fa-kit-medical"></i><h3>Minimally Invasive Surgery</h3><p>Small incisions (less than 1 cm) correct bunions, hammertoes, and neuromas. Less pain, faster recovery, and no large scars.</p></div>
       </div>
       <div style="margin-top: 38px; text-align: center;">
@@ -820,9 +881,9 @@
           <p><i class="fas fa-calendar-alt"></i> Same-day & next-day appointments available, no referral needed</p>
           <div style="margin-top: 28px; display: flex; flex-wrap: wrap; gap: 14px;">
             <!-- ZocDoc Scheduling Button -->
-	    <a href="https://www.zocdoc.com/practice/pathways-foot-and-ankle-180498?lock=true&isNewPatient=false&referrerType=widget" target="_blank" rel="noopener noreferrer" style="background-color: #FFFFFF; padding: 12px 28px; border-radius: 60px; color: #083104; text-decoration: none; font-family: 'DM Sans', sans-serif; font-weight: 700; font-size: 1rem; display: inline-flex; align-items: center; gap: 8px; border: none; cursor: pointer;">
-  	    <i class="fas fa-calendar-check"></i> Request Appointment
-	    </a>
+            <a href="https://www.zocdoc.com/practice/pathways-foot-and-ankle-180498?lock=true&isNewPatient=false&referrerType=widget" target="_blank" rel="noopener noreferrer" style="background-color: #FFFFFF; padding: 12px 28px; border-radius: 60px; color: #083104; text-decoration: none; font-family: 'DM Sans', sans-serif; font-weight: 700; font-size: 1rem; display: inline-flex; align-items: center; gap: 8px; border: none; cursor: pointer;">
+              <i class="fas fa-calendar-check"></i> Request Appointment
+            </a>
           </div>
         </div>
         <div style="min-width: 220px; flex: 1;">
@@ -895,6 +956,42 @@
   window.addEventListener('resize', toggleScrollButton);
   if (scrollBtn) scrollBtn.addEventListener('click', scrollToTop);
   toggleScrollButton();
+
+  // Background Slideshow
+  let bgSlideIndex = 0;
+  const bgSlides = document.querySelectorAll('.bg-slide');
+  let slideshowInterval;
+
+  function showBgSlides() {
+    if (!bgSlides.length) return;
+    
+    // Remove active class from all slides
+    bgSlides.forEach(slide => {
+      slide.classList.remove('active');
+    });
+    
+    // Increment index
+    bgSlideIndex++;
+    if (bgSlideIndex > bgSlides.length) {
+      bgSlideIndex = 1;
+    }
+    
+    // Add active class to current slide
+    if (bgSlides[bgSlideIndex - 1]) {
+      bgSlides[bgSlideIndex - 1].classList.add('active');
+    }
+  }
+
+  // Start the slideshow when page loads
+  document.addEventListener('DOMContentLoaded', function() {
+    if (bgSlides.length > 0) {
+      // Set first slide as active initially
+      bgSlides[0].classList.add('active');
+      bgSlideIndex = 1;
+      // Start interval
+      slideshowInterval = setInterval(showBgSlides, 5000);
+    }
+  });
 </script>
 </body>
 </html>
