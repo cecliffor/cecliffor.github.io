@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Patient Handout: Shockwave Therapy | Pathways Foot & Ankle</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&family=Rethink+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Font Awesome 6 (Free) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #F5F7F2;
+      font-family: 'Rethink Sans', 'Segoe UI', Helvetica, Arial, sans-serif;
+      color: #083104;
+      line-height: 1.5;
+      padding: 40px 20px;
+    }
+
+    /* Print-specific styles */
+    @media print {
+      body {
+        background-color: white;
+        padding: 0;
+        margin: 0;
+      }
+      .handout-container {
+        box-shadow: none;
+        margin: 0;
+        border-radius: 0;
+      }
+      .no-print {
+        display: none;
+      }
+      .print-footer {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        text-align: center;
+        font-size: 10px;
+        color: #999;
+        border-top: 1px solid #e0ecd9;
+        padding: 8px 0;
+        background: white;
+      }
+    }
+
+    .handout-container {
+      max-width: 1000px;
+      margin: 0 auto;
+      background: white;
+      border-radius: 24px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+      overflow: hidden;
+    }
+
+    /* Header */
+    .handout-header {
+      background: linear-gradient(135deg, #083104 0%, #0a4a0a 100%);
+      padding: 32px 40px;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .handout-title h1 {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+    .handout-title p {
+      opacity: 0.85;
+      font-size: 0.9rem;
+    }
+    .handout-logo {
+      text-align: right;
+    }
+    .handout-logo img {
+      height: 100px;
+      width: auto;
+    }
+    .handout-logo .logo-fallback {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: white;
+    }
+
+    /* Floating Return to Homepage Button */
+    .return-home-btn {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      width: 52px;
+      height: 52px;
+      background-color: #438950;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      transition: all 0.3s ease;
+      z-index: 1000;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      text-decoration: none;
+    }
+    .return-home-btn:hover {
+      background-color: #083104;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+      color: white;
+    }
+    @media (max-width: 640px) {
+      .return-home-btn {
+        bottom: 20px;
+        right: 20px;
+        width: 44px;
+        height: 44px;
+        font-size: 1.2rem;
+      }
+    }
+    @media print {
+      .return-home-btn {
+        display: none !important;
+      }
+    }
+
+    /* Content */
+    .handout-content {
+      padding: 40px;
+    }
+
+    /* Section styling */
+    .section {
+      margin-bottom: 32px;
+    }
+    .section-title {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: #083104;
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      border-left: 4px solid #438950;
+      padding-left: 16px;
+    }
+    .section-title i {
+      color: #438950;
+      font-size: 1.3rem;
+    }
+
+    .info-box {
+      background: #F5F9F2;
+      border-radius: 20px;
+      padding: 24px;
+      margin: 24px 0;
+      border-left: 4px solid #438950;
+    }
+
+    .info-box h3 {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 1.1rem;
+      margin-bottom: 12px;
+      color: #083104;
+    }
+
+    /* Simple bullet list with check-circle */
+    .bullet-list {
+      list-style: none;
+      padding-left: 0;
+    }
+    .bullet-list li {
+      margin-bottom: 10px;
+      padding-left: 28px;
+      position: relative;
+    }
+    .bullet-list li i {
+      color: #438950;
+      position: absolute;
+      left: 0;
+      top: 3px;
+      font-size: 0.9rem;
+    }
+
+    /* Two-column layout */
+    .two-col {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 32px;
+      margin: 24px 0;
+    }
+    .col {
+      flex: 1;
+      min-width: 200px;
+    }
+
+    .callout {
+      background: #083104;
+      color: white;
+      border-radius: 20px;
+      padding: 24px;
+      text-align: center;
+      margin: 32px 0;
+    }
+    .callout p {
+      margin-bottom: 12px;
+    }
+    .callout a {
+      color: #FFFFFF;
+      text-decoration: none;
+      font-weight: 600;
+      border-bottom: 1px solid #438950;
+    }
+
+    .print-footer {
+      text-align: center;
+      font-size: 0.7rem;
+      color: #8a9c7a;
+      padding: 16px 40px 24px;
+      border-top: 1px solid #e0ecd9;
+    }
+
+    @media (max-width: 640px) {
+      .handout-header {
+        flex-direction: column;
+        text-align: center;
+      }
+      .handout-logo {
+        text-align: center;
+      }
+      .handout-content {
+        padding: 24px;
+      }
+      .section-title {
+        font-size: 1.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="handout-container">
+  <!-- Header -->
+  <div class="handout-header">
+    <div class="handout-title">
+      <h1>Shockwave Therapy for the Foot & Ankle</h1>
+      <p>Patient Information Guide | Pathways Foot & Ankle</p>
+    </div>
+    <div class="handout-logo">
+      <img src="../img/PATHWAYS_FINAL_WHITE.png" alt="Pathways Foot & Ankle" onerror="this.style.display='none'; this.nextSibling.style.display='block';">
+      <div class="logo-fallback" style="display: none;">Pathways Foot & Ankle</div>
+    </div>
+  </div>
+
+  <!-- Content -->
+  <div class="handout-content">
+    
+    <!-- Introduction -->
+    <div class="section">
+      <div class="section-title">
+        <i class="fas fa-wave-square"></i>
+        <h2>What is Shockwave Therapy?</h2>
+      </div>
+      <p>Shockwave therapy is a non-invasive, drug-free treatment that uses high-energy sound waves to stimulate healing in damaged soft tissues and nerves. It is highly effective for chronic foot and ankle conditions like plantar fasciitis, Achilles tendinitis, peripheral neuropathy, and nerve entrapments that haven't responded to traditional treatments.</p>
+    </div>
+
+    <!-- How It Works -->
+    <div class="section">
+      <div class="section-title">
+        <i class="fas fa-microscope"></i>
+        <h2>How Does It Work?</h2>
+      </div>
+      <p>During treatment, a handheld device delivers acoustic waves directly to the injured area. These waves:</p>
+      <ul class="bullet-list" style="margin-top: 12px;">
+        <li><i class="fas fa-check-circle"></i> Increase blood flow to promote natural healing</li>
+        <li><i class="fas fa-check-circle"></i> Break down scar tissue and calcium deposits</li>
+        <li><i class="fas fa-check-circle"></i> Stimulate the body's own repair mechanisms</li>
+        <li><i class="fas fa-check-circle"></i> Reduce pain by overstimulating nerve endings</li>
+        <li><i class="fas fa-check-circle"></i> Promote nerve regeneration and reduce neuroinflammation</li>
+      </ul>
+    </div>
+
+    <!-- Conditions Treated - Foot & Ankle Only -->
+    <div class="section">
+      <div class="section-title">
+        <i class="fas fa-stethoscope"></i>
+        <h2>Foot & Ankle Conditions Treated</h2>
+      </div>
+      <div class="two-col">
+        <div class="col">
+          <h3 style="margin-bottom: 8px;">Tendon & Soft Tissue</h3>
+          <ul class="bullet-list">
+            <li><i class="fas fa-check-circle"></i> Plantar Fasciitis (heel pain)</li>
+            <li><i class="fas fa-check-circle"></i> Achilles Tendinitis</li>
+            <li><i class="fas fa-check-circle"></i> Posterior Tibial Tendinitis</li>
+            <li><i class="fas fa-check-circle"></i> Peroneal Tendinitis</li>
+          </ul>
+        </div>
+        <div class="col">
+          <h3 style="margin-bottom: 8px;">Nerve Conditions</h3>
+          <ul class="bullet-list">
+            <li><i class="fas fa-check-circle"></i> Peripheral Neuropathy</li>
+            <li><i class="fas fa-check-circle"></i> Morton's Neuroma</li>
+            <li><i class="fas fa-check-circle"></i> Tarsal Tunnel Syndrome</li>
+            <li><i class="fas fa-check-circle"></i> Diabetic Neuropathy</li>
+          </ul>
+        </div>
+      </div>
+      <div class="info-box" style="margin-top: 8px;">
+        <h3><i class="fas fa-brain"></i> How Shockwave Helps Nerve Issues</h3>
+        <p>Research shows shockwave therapy can help regenerate damaged peripheral nerves by stimulating the release of growth factors, reducing neuroinflammation, and improving blood flow to nerve tissues. Patients with peripheral neuropathy, neuromas, and nerve entrapments often report reduced burning, tingling, and numbness after a course of treatment.</p>
+      </div>
+    </div>
+
+    <!-- What to Expect -->
+    <div class="section">
+      <div class="section-title">
+        <i class="fas fa-calendar-alt"></i>
+        <h2>What to Expect</h2>
+      </div>
+      <div class="two-col">
+        <div class="col">
+          <div class="info-box" style="margin-top: 0;">
+            <h3>During Treatment</h3>
+            <p>The shockwave device is applied directly to the affected area for about 5-10 minutes. You may feel a tapping or pulsing sensation, but most patients find it tolerable.</p>
+          </div>
+        </div>
+        <div class="col">
+          <div class="info-box" style="margin-top: 0;">
+            <h3>After Treatment</h3>
+            <p>Mild soreness or bruising is possible for 24-48 hours. Most patients resume normal activities immediately—no downtime, no needles, no anesthesia.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Treatment Schedule -->
+    <div class="info-box">
+      <h3><i class="fas fa-chart-line"></i> Treatment Schedule</h3>
+      <ul class="bullet-list" style="margin-bottom: 0;">
+        <li><i class="fas fa-check-circle"></i> Typically 3 to 5 sessions, spaced about 1 week apart</li>
+        <li><i class="fas fa-check-circle"></i> Each session lasts approximately 15-20 minutes</li>
+        <li><i class="fas fa-check-circle"></i> Improvement is often noticed after 2-3 sessions</li>
+        <li><i class="fas fa-check-circle"></i> Full results may take 4-12 weeks as the body continues healing</li>
+        <li><i class="fas fa-check-circle"></i> Nerve-related symptoms (tingling, burning, numbness) may improve gradually over several weeks</li>
+      </ul>
+    </div>
+
+    <!-- Benefits -->
+    <div class="section">
+      <div class="section-title">
+        <i class="fas fa-heartbeat"></i>
+        <h2>Key Benefits</h2>
+      </div>
+      <div class="two-col">
+        <div class="col">
+          <ul class="bullet-list">
+            <li><i class="fas fa-check-circle"></i> <strong>No surgery</strong> – Completely non-invasive</li>
+            <li><i class="fas fa-check-circle"></i> <strong>No downtime</strong> – Return to normal activity immediately</li>
+            <li><i class="fas fa-check-circle"></i> <strong>No needles</strong> – No injections or anesthesia required</li>
+            <li><i class="fas fa-check-circle"></i> <strong>No medication</strong> – No risk of drug side effects</li>
+          </ul>
+        </div>
+        <div class="col">
+          <ul class="bullet-list">
+            <li><i class="fas fa-check-circle"></i> <strong>High success rate</strong> – 70-90% of patients report significant improvement</li>
+            <li><i class="fas fa-check-circle"></i> <strong>Treats the cause</strong> – Stimulates healing, not just masking pain</li>
+            <li><i class="fas fa-check-circle"></i> <strong>Effective for nerve pain</strong> – Promotes nerve regeneration and reduces neuroinflammation</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Comparison to Other Treatments -->
+    <div class="section">
+      <div class="section-title">
+        <i class="fas fa-chart-simple"></i>
+        <h2>Shockwave vs. Other Treatments</h2>
+      </div>
+      <ul class="bullet-list">
+        <li><i class="fas fa-check-circle"></i> <strong>vs. Cortisone injections:</strong> Treats the underlying problem, not just inflammation; no risk of tendon weakening or rupture</li>
+        <li><i class="fas fa-check-circle"></i> <strong>vs. Surgery:</strong> No incisions, no recovery time, no surgical risks</li>
+        <li><i class="fas fa-check-circle"></i> <strong>vs. Physical therapy alone:</strong> Jumpstarts healing that may have stalled with conventional therapy</li>
+        <li><i class="fas fa-check-circle"></i> <strong>vs. Nerve medications (gabapentin, etc.):</strong> No systemic side effects; addresses nerve health directly rather than blocking pain signals</li>
+      </ul>
+    </div>
+
+    <!-- When to Consider -->
+    <div class="section">
+      <div class="section-title">
+        <i class="fas fa-clock"></i>
+        <h2>Is Shockwave Therapy Right for You?</h2>
+      </div>
+      <ul class="bullet-list">
+        <li><i class="fas fa-check-circle"></i> You've had heel pain, tendon pain, or nerve symptoms (burning, tingling, numbness) for more than 3 months</li>
+        <li><i class="fas fa-check-circle"></i> Traditional treatments (rest, ice, stretching, orthotics, medications) haven't helped</li>
+        <li><i class="fas fa-check-circle"></i> You want to avoid surgery or cortisone injections</li>
+        <li><i class="fas fa-check-circle"></i> You're looking for a treatment with no downtime</li>
+      </ul>
+    </div>
+
+    <!-- What to Expect at Pathways -->
+    <div class="section">
+      <div class="section-title">
+        <i class="fas fa-handshake"></i>
+        <h2>What to Expect at Pathways Foot & Ankle</h2>
+      </div>
+      <p>When you come to see Dr. Clifford for shockwave therapy, you can expect:</p>
+      <ul class="bullet-list" style="margin-top: 12px;">
+        <li><i class="fas fa-check-circle"></i> A thorough evaluation to confirm you're a good candidate</li>
+        <li><i class="fas fa-check-circle"></i> Diagnostic ultrasound to precisely locate the source of your pain or nerve irritation</li>
+        <li><i class="fas fa-check-circle"></i> A clear explanation of the procedure, benefits, and risks</li>
+        <li><i class="fas fa-check-circle"></i> A personalized treatment plan tailored to your condition</li>
+        <li><i class="fas fa-check-circle"></i> Transparent pricing with no surprise bills</li>
+        <li><i class="fas fa-check-circle"></i> Same-day or next-day appointments, no referral needed</li>
+      </ul>
+    </div>
+
+    <!-- Call to Action -->
+    <div class="callout">
+      <p><i class="fas fa-wave-square" style="margin-right: 10px;"></i> <strong>Ready to get back on your feet?</strong></p>
+      <p>Call Dr. Clifford directly at <a href="tel:+19713595299">(971) 359-5299</a> or visit <a href="https://www.pathwaysfoot.com" target="_blank" rel="noopener noreferrer"><strong>www.pathwaysfoot.com</strong></a> to schedule your consultation.</p>
+      <p style="font-size: 0.85rem; margin-top: 12px; opacity: 0.8;">216 14th St, Oregon City, OR 97045 | Same-day visits available</p>
+    </div>
+
+    <!-- Disclaimer -->
+    <div class="print-footer">
+      <p>This information is for educational purposes only and is not a substitute for professional medical advice. Always consult with a qualified healthcare provider for diagnosis and treatment of any medical condition.</p>
+      <p style="margin-top: 8px;">© 2026 Pathways Foot & Ankle | Dr. Craig E. Clifford, DPM, MHA | Board Certified Foot and Ankle Specialist</p>
+    </div>
+  </div>
+</div>
+
+<!-- Print button -->
+<div class="no-print" style="text-align: center; margin-top: 24px;">
+  <button onclick="window.print();" style="background-color: #083104; color: white; border: none; padding: 12px 28px; border-radius: 40px; font-family: 'DM Sans', sans-serif; font-weight: 600; cursor: pointer;">
+    <i class="fas fa-print"></i> Print or Save as PDF
+  </button>
+</div>
+
+<!-- Floating Return to Homepage Button -->
+<a href="/index.html" class="return-home-btn" aria-label="Return to Homepage">
+  <i class="fas fa-reply"></i>
+</a>
+
+<script>
+  // Handle logo fallback
+  const logoImg = document.querySelector('.handout-logo img');
+  if (logoImg) {
+    logoImg.onerror = function() {
+      this.style.display = 'none';
+      const fallback = this.nextElementSibling;
+      if (fallback) fallback.style.display = 'block';
+    };
+  }
+</script>
+</body>
+</html>

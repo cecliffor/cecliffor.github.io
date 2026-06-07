@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Patient Handout: Ingrown Toenails | Pathways Foot & Ankle</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&family=Rethink+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Font Awesome 6 (Free) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #F5F7F2;
+      font-family: 'Rethink Sans', 'Segoe UI', Helvetica, Arial, sans-serif;
+      color: #083104;
+      line-height: 1.5;
+      padding: 40px 20px;
+    }
+
+    @media print {
+      body {
+        background-color: white;
+        padding: 0;
+        margin: 0;
+      }
+      .handout-container {
+        box-shadow: none;
+        margin: 0;
+        border-radius: 0;
+      }
+      .no-print {
+        display: none;
+      }
+    }
+
+    .handout-container {
+      max-width: 1000px;
+      margin: 0 auto;
+      background: white;
+      border-radius: 24px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+      overflow: hidden;
+    }
+
+    .handout-header {
+      background: linear-gradient(135deg, #083104 0%, #0a4a0a 100%);
+      padding: 32px 40px;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .handout-title h1 {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+    .handout-title p {
+      opacity: 0.85;
+      font-size: 0.9rem;
+    }
+    .handout-logo {
+      text-align: right;
+    }
+    .handout-logo img {
+      height: 100px;
+      width: auto;
+    }
+
+    .return-home-btn {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      width: 52px;
+      height: 52px;
+      background-color: #438950;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      transition: all 0.3s ease;
+      z-index: 1000;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      text-decoration: none;
+    }
+    .return-home-btn:hover {
+      background-color: #083104;
+      transform: translateY(-2px);
+    }
+    @media (max-width: 640px) {
+      .return-home-btn {
+        bottom: 20px;
+        right: 20px;
+        width: 44px;
+        height: 44px;
+        font-size: 1.2rem;
+      }
+    }
+    @media print {
+      .return-home-btn, .no-print {
+        display: none !important;
+      }
+    }
+
+    .handout-content {
+      padding: 40px;
+    }
+
+    .section {
+      margin-bottom: 32px;
+    }
+    .section-title {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: #083104;
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      border-left: 4px solid #438950;
+      padding-left: 16px;
+    }
+    .section-title i {
+      color: #438950;
+      font-size: 1.3rem;
+    }
+
+    .info-box {
+      background: #F5F9F2;
+      border-radius: 20px;
+      padding: 24px;
+      margin: 24px 0;
+      border-left: 4px solid #438950;
+    }
+    .info-box h3 {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 1.1rem;
+      margin-bottom: 12px;
+    }
+
+    .bullet-list {
+      list-style: none;
+      padding-left: 0;
+    }
+    .bullet-list li {
+      margin-bottom: 10px;
+      padding-left: 28px;
+      position: relative;
+    }
+    .bullet-list li i {
+      color: #438950;
+      position: absolute;
+      left: 0;
+      top: 3px;
+      font-size: 0.9rem;
+    }
+
+    .two-col {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 32px;
+      margin: 24px 0;
+    }
+    .col {
+      flex: 1;
+      min-width: 200px;
+    }
+
+    .comparison-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 24px 0;
+      font-size: 0.85rem;
+    }
+    .comparison-table th, .comparison-table td {
+      border: 1px solid #e0ecd9;
+      padding: 12px;
+      text-align: left;
+      vertical-align: top;
+    }
+    .comparison-table th {
+      background: #F5F9F2;
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 700;
+    }
+
+    .callout {
+      background: #083104;
+      color: white;
+      border-radius: 20px;
+      padding: 24px;
+      text-align: center;
+      margin: 32px 0;
+    }
+    .callout a {
+      color: #FFFFFF;
+      text-decoration: none;
+      font-weight: 600;
+      border-bottom: 1px solid #438950;
+    }
+
+    .print-footer {
+      text-align: center;
+      font-size: 0.7rem;
+      color: #8a9c7a;
+      padding: 16px 40px 24px;
+      border-top: 1px solid #e0ecd9;
+    }
+
+    @media (max-width: 640px) {
+      .handout-header {
+        flex-direction: column;
+        text-align: center;
+      }
+      .handout-logo {
+        text-align: center;
+      }
+      .handout-content {
+        padding: 24px;
+      }
+      .section-title {
+        font-size: 1.2rem;
+      }
+      .comparison-table th, .comparison-table td {
+        padding: 8px;
+        font-size: 0.75rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="handout-container">
+  <div class="handout-header">
+    <div class="handout-title">
+      <h1>Ingrown Toenails</h1>
+      <p>Patient Information Guide | Pathways Foot & Ankle</p>
+    </div>
+    <div class="handout-logo">
+      <img src="../img/PATHWAYS_FINAL_WHITE.png" alt="Pathways Foot & Ankle">
+    </div>
+  </div>
+
+  <div class="handout-content">
+    
+    <div class="section">
+      <div class="section-title">
+        <i class="fas fa-foot-print"></i>
+        <h2>What is an Ingrown Toenail?</h2>
+      </div>
+      <p>An ingrown toenail occurs when the corner or side of a toenail grows into the surrounding skin, causing pain, redness, swelling, and sometimes infection. The big toe is most commonly affected. While many people try to manage ingrown nails at home, recurrent or severe cases often require professional treatment.</p>
+    </div>
+
+    <div class="section">
+      <div class="section-title">
+        <i class="fas fa-exclamation-triangle"></i>
+        <h2>Common Causes</h2>
+      </div>
+      <ul class="bullet-list">
+        <li><i class="fas fa-check-circle"></i> Improper nail trimming (cutting too short or rounding the edges)</li>
+        <li><i class="fas fa-check-circle"></i> Tight or poorly fitting shoes</li>
+        <li><i class="fas fa-check-circle"></i> Trauma to the toe (stubbing, dropping something on it)</li>
+        <li><i class="fas fa-check-circle"></i> Naturally curved or thickened nails</li>
+        <li><i class="fas fa-check-circle"></i> Family history of ingrown toenails</li>
+        <li><i class="fas fa-check-circle"></i> Excessive sweating (moist environments soften skin)</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <div class="section-title">
+        <i class="fas fa-stethoscope"></i>
+        <h2>Signs & Symptoms</h2>
+      </div>
+      <ul class="bullet-list">
+        <li><i class="fas fa-check-circle"></i> Pain and tenderness along the side of the nail</li>
+        <li><i class="fas fa-check-circle"></i> Redness and swelling around the nail edge</li>
+        <li><i class="fas fa-check-circle"></i> Warmth or drainage (pus) if infected</li>
+        <li><i class="fas fa-check-circle"></i> Difficulty wearing shoes or walking</li>
+        <li><i class="fas fa-check-circle"></i> Overgrowth of skin around the nail (proud flesh/hypergranulation tissue)</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <div class="section-title">
+        <i class="fas fa-heartbeat"></i>
+        <h2>Treatment Options</h2>
+      </div>
+      <p style="margin-bottom: 16px;">At Pathways Foot & Ankle, we offer a full range of treatments — from conservative at-home care to in-office procedures. Surgery is not always necessary.</p>
+      
+      <div class="two-col">
+        <div class="col">
+          <div class="info-box" style="margin-top: 0;">
+            <h3><i class="fas fa-home"></i> Conservative Care</h3>
+            <ul class="bullet-list" style="margin-bottom: 0;">
+              <li><i class="fas fa-check-circle"></i> Warm water soaks with Epsom salt (2-3 times daily)</li>
+              <li><i class="fas fa-check-circle"></i> Proper trimming — straight across, not curved</li>
+              <li><i class="fas fa-check-circle"></i> Placing a small piece of cotton or dental floss under the nail edge</li>
+              <li><i class="fas fa-check-circle"></i> Wearing open-toed or wide-width shoes</li>
+              <li><i class="fas fa-check-circle"></i> Topical antibiotic ointment if signs of infection</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col">
+          <div class="info-box" style="margin-top: 0;">
+            <h3><i class="fas fa-clinic-medical"></i> In-Office Procedures</h3>
+            <ul class="bullet-list" style="margin-bottom: 0;">
+              <li><i class="fas fa-check-circle"></i> Partial nail avulsion (removal of the ingrown border)</li>
+              <li><i class="fas fa-check-circle"></i> Nail matrixectomy (permanent removal with phenol)</li>
+              <li><i class="fas fa-check-circle"></i> NailLift — non-invasive nail brace technology</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Detailed Procedure Descriptions -->
+    <div class="section">
+      <div class="section-title">
+        <i class="fas fa-scalpel"></i>
+        <h2>In-Office Procedures Explained</h2>
+      </div>
+      
+      <div class="info-box">
+        <h3><i class="fas fa-cut"></i> Partial Nail Avulsion (Border Removal)</h3>
+        <p>After numbing the toe with local anesthesia, Dr. Clifford removes the ingrown portion of the nail (usually 2-3 millimeters along the side). This immediately relieves the pressure and pain. The nail typically grows back in 4-6 months, but some patients experience recurrence if the nail regrows in the same curved shape.</p>
+        <p><strong>Recovery:</strong> Mild soreness for 1-2 days. Keep the toe clean and dry for 24 hours. Most patients resume normal activity immediately.</p>
+      </div>
+      
+      <div class="info-box">
+        <h3><i class="fas fa-ban"></i> Nail Matrixectomy (Permanent Removal)</h3>
+        <p>For patients with recurrent ingrown toenails, a matrixectomy is the most definitive solution. After removing the ingrown nail border, Dr. Clifford applies a small amount of phenol (a chemical agent) to the nail matrix — the root of the nail — to prevent regrowth of that specific edge. The rest of the nail remains completely normal in appearance.</p>
+        <p><strong>Recovery:</strong> Soreness for 2-3 days. The treated area forms a small scab and heals over 2-4 weeks. Success rate exceeds 95% with very low recurrence.</p>
+      </div>
+      
+      <div class="info-box">
+        <h3><i class="fas fa-bezier-curve"></i> NailLift (Non-Invasive Nail Brace)</h3>
+        <p>For patients who want to avoid any cutting or permanent changes to the nail, NailLift is an excellent option. A small, flexible composite brace is bonded to the top of the nail. The brace gently lifts and flattens the edges of the nail over time, training it to grow correctly without digging into the skin.</p>
+        <ul class="bullet-list" style="margin-bottom: 0;">
+          <li><i class="fas fa-check-circle"></i> <strong>No needles</strong> – No anesthesia required</li>
+          <li><i class="fas fa-check-circle"></i> <strong>No downtime</strong> – Resume normal activities immediately</li>
+          <li><i class="fas fa-check-circle"></i> <strong>Painless</strong> – Immediate relief once the brace is applied</li>
+          <li><i class="fas fa-check-circle"></i> Typically worn for 3-6 months as the nail grows out</li>
+          <li><i class="fas fa-check-circle"></i> Ideal for mild to moderate ingrown nails, especially in patients who are prone to recurrence</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Comparison Table -->
+    <div class="section">
+      <div class="section-title">
+        <i class="fas fa-chart-simple"></i>
+        <h2>Comparing Your Options</h2>
+      </div>
+      <table class="comparison-table">
+        <thead>
+          <tr><th></th><th>Partial Avulsion</th><th>Matrixectomy</th><th>NailLift</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>Invasive?</strong></td><td>Yes (small cut)</td><td>Yes (cut + chemical)</td><td>No (brace only)</td></tr>
+          <tr><td><strong>Needles?</strong></td><td>Yes (local anesthesia)</td><td>Yes (local anesthesia)</td><td>No</td></tr>
+          <tr><td><strong>Downtime</strong></td><td>1-2 days</td><td>2-3 days</td><td>None</td></tr>
+          <tr><td><strong>Permanent?</strong></td><td>No (nail regrows)</td><td>Yes (edge permanently removed)</td><td>No (corrects growth pattern)</td></tr>
+          <tr><td><strong>Best for</strong></td><td>Single episode, mild</td><td>Recurrent, severe</td><td>Mild-moderate, wants non-invasive</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- When to Seek Care -->
+    <div class="section">
+      <div class="section-title">
+        <i class="fas fa-clock"></i>
+        <h2>When to See a Specialist</h2>
+      </div>
+      <ul class="bullet-list">
+        <li><i class="fas fa-check-circle"></i> Home care hasn't improved the pain after a few days</li>
+        <li><i class="fas fa-check-circle"></i> You see signs of infection — redness spreading, warmth, pus, fever</li>
+        <li><i class="fas fa-check-circle"></i> You have diabetes, poor circulation, or a weakened immune system</li>
+        <li><i class="fas fa-check-circle"></i> You get recurrent ingrown toenails on the same toe</li>
+        <li><i class="fas fa-check-circle"></i> The pain is severe enough to interfere with walking or wearing shoes</li>
+      </ul>
+    </div>
+
+    <!-- Prevention -->
+    <div class="info-box">
+      <h3><i class="fas fa-shield-alt"></i> Prevention Tips</h3>
+      <ul class="bullet-list" style="margin-bottom: 0;">
+        <li><i class="fas fa-check-circle"></i> Trim nails straight across — never round the corners</li>
+        <li><i class="fas fa-check-circle"></i> Wear shoes with a wide toe box</li>
+        <li><i class="fas fa-check-circle"></i> Avoid cutting nails too short</li>
+        <li><i class="fas fa-check-circle"></i> Keep feet clean and dry</li>
+        <li><i class="fas fa-check-circle"></i> If you have diabetes, have a podiatrist trim your nails</li>
+      </ul>
+    </div>
+
+    <!-- What to Expect at Pathways -->
+    <div class="section">
+      <div class="section-title">
+        <i class="fas fa-handshake"></i>
+        <h2>What to Expect at Pathways Foot & Ankle</h2>
+      </div>
+      <ul class="bullet-list">
+        <li><i class="fas fa-check-circle"></i> A thorough examination to determine the best treatment for you</li>
+        <li><i class="fas fa-check-circle"></i> Same-day treatment for most ingrown toenails — no need for a separate appointment</li>
+        <li><i class="fas fa-check-circle"></i> Numbing injections (if needed) with a very thin needle to minimize discomfort</li>
+        <li><i class="fas fa-check-circle"></i> Clear aftercare instructions and follow-up as needed</li>
+        <li><i class="fas fa-check-circle"></i> Transparent pricing with no surprise bills</li>
+        <li><i class="fas fa-check-circle"></i> Same-day or next-day appointments, no referral needed</li>
+      </ul>
+    </div>
+
+    <!-- Call to Action -->
+    <div class="callout">
+      <p><i class="fas fa-band-aid" style="margin-right: 10px;"></i> <strong>Ready to get relief from your ingrown toenail?</strong></p>
+      <p>Call Dr. Clifford directly at <a href="tel:+19713595299">(971) 359-5299</a> or visit <a href="https://www.pathwaysfoot.com" target="_blank" rel="noopener noreferrer"><strong>www.pathwaysfoot.com</strong></a> to schedule your appointment.</p>
+      <p style="font-size: 0.85rem; margin-top: 12px; opacity: 0.8;">216 14th St, Oregon City, OR 97045 | Same-day visits available</p>
+    </div>
+
+    <!-- Disclaimer -->
+    <div class="print-footer">
+      <p>This information is for educational purposes only and is not a substitute for professional medical advice. Always consult with a qualified healthcare provider for diagnosis and treatment of any medical condition.</p>
+      <p style="margin-top: 8px;">© 2026 Pathways Foot & Ankle | Dr. Craig E. Clifford, DPM, MHA | Board Certified Foot and Ankle Specialist</p>
+    </div>
+  </div>
+</div>
+
+<div class="no-print" style="text-align: center; margin-top: 24px;">
+  <button onclick="window.print();" style="background-color: #083104; color: white; border: none; padding: 12px 28px; border-radius: 40px; font-family: 'DM Sans', sans-serif; font-weight: 600; cursor: pointer;">
+    <i class="fas fa-print"></i> Print or Save as PDF
+  </button>
+</div>
+
+<a href="/index.html" class="return-home-btn" aria-label="Return to Homepage">
+  <i class="fas fa-reply"></i>
+</a>
+
+<script>
+  // Handle logo fallback
+  const logoImg = document.querySelector('.handout-logo img');
+  if (logoImg) {
+    logoImg.onerror = function() {
+      this.style.display = 'none';
+      const fallback = document.createElement('div');
+      fallback.className = 'logo-fallback';
+      fallback.textContent = 'Pathways Foot & Ankle';
+      this.parentNode.appendChild(fallback);
+    };
+  }
+</script>
+</body>
+</html>
