@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Patient Handout: Routine Nail & Callus Care | Pathways Foot & Ankle</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&family=Rethink+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Font Awesome 6 (Free) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #F5F7F2;
+      font-family: 'Rethink Sans', 'Segoe UI', Helvetica, Arial, sans-serif;
+      color: #083104;
+      line-height: 1.5;
+      padding: 40px 20px;
+    }
+
+    @media print {
+      body {
+        background-color: white;
+        padding: 0;
+        margin: 0;
+      }
+      .handout-container {
+        box-shadow: none;
+        margin: 0;
+        border-radius: 0;
+      }
+    }
+
+    .handout-container {
+      max-width: 1000px;
+      margin: 0 auto;
+      background: white;
+      border-radius: 24px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+      overflow: hidden;
+    }
+
+    .handout-header {
+      background: linear-gradient(135deg, #083104 0%, #0a4a0a 100%);
+      padding: 32px 40px;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .handout-title h1 {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+    .handout-title p {
+      opacity: 0.85;
+      font-size: 0.9rem;
+    }
+    .handout-logo {
+      text-align: right;
+    }
+    .handout-logo img {
+      height: 100px;
+      width: auto;
+    }
+
+    .return-home-btn {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      width: 52px;
+      height: 52px;
+      background-color: #438950;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      transition: all 0.3s ease;
+      z-index: 1000;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      text-decoration: none;
+    }
+    .return-home-btn:hover {
+      background-color: #083104;
+      transform: translateY(-2px);
+    }
+    @media (max-width: 640px) {
+      .return-home-btn {
+        bottom: 20px;
+        right: 20px;
+        width: 44px;
+        height: 44px;
+        font-size: 1.2rem;
+      }
+    }
+    @media print {
+      .return-home-btn {
+        display: none !important;
+      }
+    }
+
+    .handout-content {
+      padding: 40px;
+    }
+
+    .section {
+      margin-bottom: 32px;
+    }
+    .section-title {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: #083104;
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      border-left: 4px solid #438950;
+      padding-left: 16px;
+    }
+    .section-title i {
+      color: #438950;
+      font-size: 1.3rem;
+    }
+
+    .info-box {
+      background: #F5F9F2;
+      border-radius: 20px;
+      padding: 24px;
+      margin: 24px 0;
+      border-left: 4px solid #438950;
+    }
+    .info-box h3 {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 1.1rem;
+      margin-bottom: 12px;
+    }
+
+    .bullet-list {
+      list-style: none;
+      padding-left: 0;
+    }
+    .bullet-list li {
+      margin-bottom: 10px;
+      padding-left: 28px;
+      position: relative;
+    }
+    .bullet-list li i {
+      color: #438950;
+      position: absolute;
+      left: 0;
+      top: 3px;
+      font-size: 0.9rem;
+    }
+
+    .two-col {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 32px;
+      margin: 24px 0;
+    }
+    .col {
+      flex: 1;
+      min-width: 200px;
+    }
+
+    .callout {
+      background: #083104;
+      color: white;
+      border-radius: 20px;
+      padding: 24px;
+      text-align: center;
+      margin: 32px 0;
+    }
+    .callout a {
+      color: #FFFFFF;
+      text-decoration: none;
+      font-weight: 600;
+      border-bottom: 1px solid #438950;
+    }
+
+    .print-footer {
+      text-align: center;
+      font-size: 0.7rem;
+      color: #8a9c7a;
+      padding: 16px 40px 24px;
+      border-top: 1px solid #e0ecd9;
+    }
+
+    @media (max-width: 640px) {
+      .handout-header {
+        flex-direction: column;
+        text-align: center;
+      }
+      .handout-logo {
+        text-align: center;
+      }
+      .handout-content {
+        padding: 24px;
+      }
+      .section-title {
+        font-size: 1.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="handout-container">
+  <div class="handout-header">
+    <div class="handout-title">
+      <h1>Routine Nail & Callus Care</h1>
+      <p>Patient Information Guide | Pathways Foot & Ankle</p>
+    </div>
+    <div class="handout-logo">
+      <img src="../img/PATHWAYS_FINAL_WHITE.png" alt="Pathways Foot & Ankle">
+    </div>
+  </div>
+
+  <div class="handout-content">
+    
+    <div class="section">
+      <div class="section-title">
+        <i class="fas fa-scissors"></i>
+        <h2>What is Routine Nail & Callus Care?</h2>
+      </div>
+      <p>Routine nail and callus care is a medical service performed by Dr. Clifford to maintain the health of your feet. Unlike a cosmetic pedicure, this is a <strong>medical assessment and treatment</strong> of thick, deformed, or fungal nails and painful, hardened skin (calluses). The goal is to restore comfort, improve mobility, and prevent complications — especially for those with diabetes, poor circulation, or difficulty caring for their own feet.</p>
+    </div>
+
+    <div class="section">
+      <div class="section-title">
+        <i class="fas fa-stethoscope"></i>
+        <h2>Who Benefits from This Service?</h2>
+      </div>
+      <div class="two-col">
+        <div class="col">
+          <ul class="bullet-list">
+            <li><i class="fas fa-check-circle"></i> Diabetic patients (regular foot exams are essential)</li>
+            <li><i class="fas fa-check-circle"></i> Seniors who cannot easily reach their feet</li>
+            <li><i class="fas fa-check-circle"></i> Patients with peripheral neuropathy (numbness)</li>
+            <li><i class="fas fa-check-circle"></i> Those with poor circulation</li>
+          </ul>
+        </div>
+        <div class="col">
+          <ul class="bullet-list">
+            <li><i class="fas fa-check-circle"></i> Individuals with thick, fungal, or deformed toenails</li>
+            <li><i class="fas fa-check-circle"></i> Patients with painful calluses or corns</li>
+            <li><i class="fas fa-check-circle"></i> Anyone who wants professional, safe foot care</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-title">
+        <i class="fas fa-microscope"></i>
+        <h2>What Does the Procedure Include?</h2>
+      </div>
+      <ul class="bullet-list">
+        <li><i class="fas fa-check-circle"></i> <strong>Thorough foot examination</strong> – Dr. Clifford assesses skin, nails, circulation, and sensation</li>
+        <li><i class="fas fa-check-circle"></i> <strong>Nail debridement</strong> – Thick, fungal, or deformed nails are carefully trimmed and reduced using sterile medical instruments</li>
+        <li><i class="fas fa-check-circle"></i> <strong>Callus reduction</strong> – Hardened, painful skin is gently reduced to relieve pressure and prevent ulcers</li>
+        <li><i class="fas fa-check-circle"></i> <strong>Patient education</strong> – Guidance on home care, proper footwear, and prevention</li>
+      </ul>
+      <div class="info-box">
+        <h3><i class="fas fa-hand-holding-heart"></i> Medical, Not Cosmetic</h3>
+        <p>Unlike a spa pedicure, this is a <strong>medical procedure</strong> performed by a board-certified foot and ankle specialist. Instruments are sterilized to prevent infection.</p>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-title">
+        <i class="fas fa-exclamation-triangle"></i>
+        <h2>Why Is Professional Care Important?</h2>
+      </div>
+      <div class="two-col">
+        <div class="col">
+          <h3>Risks of Improper Home Care</h3>
+          <ul class="bullet-list">
+            <li><i class="fas fa-check-circle"></i> Cutting nails too short can cause ingrown toenails</li>
+            <li><i class="fas fa-check-circle"></i> Using unsterile tools can introduce infection</li>
+            <li><i class="fas fa-check-circle"></i> Aggressive callus trimming can create open wounds</li>
+            <li><i class="fas fa-check-circle"></i> Diabetics or those with neuropathy may injure themselves without realizing it</li>
+          </ul>
+        </div>
+        <div class="col">
+          <h3>Benefits of Professional Care</h3>
+          <ul class="bullet-list">
+            <li><i class="fas fa-check-circle"></i> Sterile, medical-grade instruments</li>
+            <li><i class="fas fa-check-circle"></i> Proper nail trimming technique to prevent ingrown nails</li>
+            <li><i class="fas fa-check-circle"></i> Safe reduction of calluses without damaging healthy skin</li>
+            <li><i class="fas fa-check-circle"></i> Early detection of potential problems (ulcers, infections, skin cancer)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-title">
+        <i class="fas fa-question-circle"></i>
+        <h2>Frequently Asked Questions</h2>
+      </div>
+      
+      <div class="info-box" style="margin-bottom: 16px;">
+        <h3><i class="fas fa-clock"></i> How often should I come in?</h3>
+        <p>Most patients benefit from care every 8-12 weeks. Those with diabetes or rapid nail growth may need more frequent visits. Dr. Clifford will recommend a schedule based on your individual needs.</p>
+      </div>
+      
+      <div class="info-box" style="margin-bottom: 16px;">
+        <h3><i class="fas fa-band-aid"></i> Does it hurt?</h3>
+        <p>No. The procedure is generally painless. Dr. Clifford uses gentle, precise techniques. If you have neuropathy, you may not feel much at all — which is why professional care is especially important.</p>
+      </div>
+      
+      <div class="info-box">
+        <h3><i class="fas fa-droplet"></i> Can I still get a pedicure at a salon?</h3>
+        <p>If you have diabetes, neuropathy, or circulation problems, salon pedicures can be risky due to infection risk and aggressive callus trimming. Medical nail care with a podiatrist is the safest option. For healthy patients without risk factors, occasional salon pedicures are fine, but we recommend bringing your own tools.</p>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-title">
+        <i class="fas fa-home"></i>
+        <h2>At-Home Foot Care Tips</h2>
+      </div>
+      <ul class="bullet-list">
+        <li><i class="fas fa-check-circle"></i> Wash feet daily with mild soap and warm water, then dry thoroughly (especially between toes)</li>
+        <li><i class="fas fa-check-circle"></i> Moisturize dry skin, but avoid applying lotion between the toes</li>
+        <li><i class="fas fa-check-circle"></i> Trim nails straight across — never cut down the corners</li>
+        <li><i class="fas fa-check-circle"></i> Wear properly fitting shoes with a wide toe box</li>
+        <li><i class="fas fa-check-circle"></i> Inspect your feet daily for cuts, blisters, redness, or swelling — especially if you have diabetes</li>
+        <li><i class="fas fa-check-circle"></i> Never use razors, callus shavers, or chemical removers on your feet (these can cause burns or wounds)</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <div class="section-title">
+        <i class="fas fa-handshake"></i>
+        <h2>What to Expect at Pathways Foot & Ankle</h2>
+      </div>
+      <ul class="bullet-list">
+        <li><i class="fas fa-check-circle"></i> A thorough foot examination before any treatment</li>
+        <li><i class="fas fa-check-circle"></i> Sterile, medical-grade instruments for every patient</li>
+        <li><i class="fas fa-check-circle"></i> Gentle, professional nail trimming and callus reduction</li>
+        <li><i class="fas fa-check-circle"></i> Assessment of circulation and sensation (especially for diabetic patients)</li>
+        <li><i class="fas fa-check-circle"></i> Education on home care and prevention</li>
+        <li><i class="fas fa-check-circle"></i> Transparent pricing with no surprise bills</li>
+        <li><i class="fas fa-check-circle"></i> Same-day or next-day appointments, no referral needed</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <div class="section-title">
+        <i class="fas fa-exclamation-triangle"></i>
+        <h2>Special Note for Diabetics</h2>
+      </div>
+      <div class="info-box" style="background: #FFF8E7; border-left-color: #e6a017;">
+        <h3><i class="fas fa-exclamation-triangle" style="color: #e6a017;"></i> Why Regular Foot Care is Critical</h3>
+        <p>Diabetes can reduce blood flow and sensation in your feet. A small blister or minor cut can quickly become a serious infection or ulcer that is difficult to heal. Regular professional foot exams and nail care help prevent complications. Medicare covers routine foot care for diabetics — ask us for details.</p>
+      </div>
+    </div>
+
+    <!-- Call to Action -->
+    <div class="callout">
+      <p><i class="fas fa-scissors" style="margin-right: 10px;"></i> <strong>Ready for comfortable, healthy feet?</strong></p>
+      <p>Call Dr. Clifford directly at <a href="tel:+19713595299">(971) 359-5299</a> or visit <a href="https://www.pathwaysfoot.com" target="_blank" rel="noopener noreferrer"><strong>www.pathwaysfoot.com</strong></a> to schedule your routine nail and callus care appointment.</p>
+      <p style="font-size: 0.85rem; margin-top: 12px; opacity: 0.8;">216 14th St, Oregon City, OR 97045 | Same-day visits available</p>
+    </div>
+
+    <!-- Disclaimer -->
+    <div class="print-footer">
+      <p>This information is for educational purposes only and is not a substitute for professional medical advice. Always consult with a qualified healthcare provider for diagnosis and treatment of any medical condition.</p>
+      <p style="margin-top: 8px;">© 2026 Pathways Foot & Ankle | Dr. Craig E. Clifford, DPM, MHA | Board Certified Foot and Ankle Specialist</p>
+    </div>
+  </div>
+</div>
+
+<a href="/index.html" class="return-home-btn" aria-label="Return to Homepage">
+  <i class="fas fa-reply"></i>
+</a>
+
+<script>
+  const logoImg = document.querySelector('.handout-logo img');
+  if (logoImg) {
+    logoImg.onerror = function() {
+      this.style.display = 'none';
+      const fallback = document.createElement('div');
+      fallback.className = 'logo-fallback';
+      fallback.textContent = 'Pathways Foot & Ankle';
+      fallback.style.fontFamily = 'DM Sans, sans-serif';
+      fallback.style.fontWeight = '700';
+      fallback.style.fontSize = '1.2rem';
+      this.parentNode.appendChild(fallback);
+    };
+  }
+</script>
+</body>
+</html>
