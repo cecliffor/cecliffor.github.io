@@ -151,7 +151,7 @@
       }
     }
 
-    /* Header */
+    /* ========== HEADER (matches homepage) ========== */
     .site-header {
       background: #F5F7F2;
       border-bottom: 1px solid #e0ecd9;
@@ -196,6 +196,25 @@
       color: #438950;
     }
 
+    /* Schedule Appointment button — matches homepage */
+    .nav-btn {
+      background-color: #083104;
+      padding: 8px 20px;
+      border-radius: 40px;
+      color: white !important;
+      text-decoration: none;
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 700;
+      font-size: 0.95rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: background-color 0.2s;
+    }
+    .nav-btn:hover {
+      background-color: #438950;
+    }
+
     .hamburger {
       display: none;
       background: none;
@@ -228,6 +247,9 @@
       }
       .header-flex {
         position: relative;
+      }
+      .nav-btn {
+        width: auto;
       }
     }
 
@@ -281,31 +303,24 @@
       margin: 32px 0;
     }
 
-    .cost-grid {
+    /* Pricing grid: 3 columns */
+    .pricing-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 24px;
-      margin: 32px 0;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin: 28px 0 20px 0;
     }
-    .cost-card {
-      background: #F5F7F2;
-      border-radius: 24px;
-      padding: 24px;
-      text-align: center;
-      border: 1px solid #e0ecd9;
+
+    @media (max-width: 900px) {
+      .pricing-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
     }
-    .cost-card i {
-      font-size: 2rem;
-      color: #438950;
-      margin-bottom: 16px;
-    }
-    .cost-card h3 {
-      font-size: 1.3rem;
-      margin-bottom: 12px;
-    }
-    .cost-card p {
-      font-size: 0.9rem;
-      color: #4a6b3f;
+
+    @media (max-width: 640px) {
+      .pricing-grid {
+        grid-template-columns: 1fr;
+      }
     }
 
     .faq-item {
@@ -441,21 +456,20 @@
       .content-card { padding: 28px; }
       .section-title { font-size: 1.5rem; }
       .cta-box { padding: 32px 24px; }
-      .cost-grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
 
 <body>
 
-<!-- Top Utility Bar -->
+<!-- ========== TOP UTILITY BAR (matches homepage) ========== -->
 <div style="background-color: #083104; width: 100%; position: relative; z-index: 100;">
   <div style="display: flex; align-items: center; justify-content: center; padding: 0 28px; gap: 32px; flex-wrap: wrap; min-height: 44px;">
-    <a href="tel:+19713595299" style="color: white; text-decoration: none; font-family: 'DM Sans', sans-serif; font-size: 0.85rem; display: flex; align-items: center; gap: 8px; white-space: nowrap;">
-      <i class="fas fa-phone-alt" style="color: #438950;"></i> (971) 359-5299
+    <a href="tel:+19713595299" style="color: white; text-decoration: none; font-family: 'DM Sans', sans-serif; font-size: 0.85rem; display: flex; align-items: center; gap: 8px; transition: opacity 0.2s; white-space: nowrap;">
+      <i class="fas fa-phone-alt" style="color: #438950; font-size: 0.85rem;"></i> (971) 359-5299
     </a>
-    <a href="https://www.google.com/maps/search/216+14th+St+Oregon+City+OR+97045" target="_blank" style="color: white; text-decoration: none; font-family: 'DM Sans', sans-serif; font-size: 0.85rem; display: flex; align-items: center; gap: 8px; text-align: center;">
-      <i class="fas fa-map-marker-alt" style="color: #438950;"></i> 216 14th St, Oregon City, OR 97045
+    <a href="https://www.google.com/maps/search/216+14th+St+Oregon+City+OR+97045" target="_blank" rel="noopener noreferrer" style="color: white; text-decoration: none; font-family: 'DM Sans', sans-serif; font-size: 0.85rem; display: flex; align-items: center; gap: 8px; transition: opacity 0.2s; text-align: center;">
+      <i class="fas fa-map-marker-alt" style="color: #438950; font-size: 0.85rem;"></i> 216 14th St, Oregon City, OR 97045
     </a>
   </div>
 </div>
@@ -475,6 +489,7 @@
   }
 </style>
 
+<!-- ========== HEADER (matches homepage) ========== -->
 <header class="site-header">
   <div class="container header-flex">
     <div class="logo-area">
@@ -490,7 +505,10 @@
       <a href="index.html#services"><i class="fas fa-stethoscope"></i> Services</a>
       <a href="index.html#about"><i class="fas fa-user-md"></i> About</a>
       <a href="index.html#contact"><i class="fas fa-map-marker-alt"></i> Contact</a>
-      <a href="index.html" style="background-color: #083104; padding: 8px 20px; border-radius: 40px; color: white !important;">Back to Home</a>
+      <a href="https://forms.gle/Y1WrzTN6Md8n541m6"><i class="fa-solid fa-pen-to-square"></i> Intake Forms</a>
+      <a href="https://calendar.app.google/AGPN6nXaF5m3rfLv9" target="_blank" rel="noopener noreferrer" class="nav-btn">
+        <i class="fas fa-calendar-check"></i> Schedule Appointment
+      </a>
     </div>
   </div>
 </header>
@@ -516,7 +534,6 @@
       <p>At <b>Pathways Foot & Ankle</b>, Dr. Clifford spends his time where it belongs: with you. Longer, unhurried appointments, more thorough evaluations, and treatment plans designed for your unique needs—not a one-size-fits-all insurance protocol.</p>
     </div>
 
-
     <!-- Cost Comparison -->
     <div class="content-card">
         <div class="section-title">
@@ -525,7 +542,7 @@
         </div>
         
         <!-- Pricing Cards -->
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 20px; margin: 28px 0 20px 0;">
+<div class="pricing-grid">
   
   <!-- Card: Complex New Patient Exam -->
   <div style="background: #FFFFFF; border-radius: 20px; padding: 22px 18px; text-align: left; border: 1px solid #e0ecd9; box-shadow: 0 2px 8px rgba(0,0,0,0.04); display: flex; flex-direction: column;">
@@ -683,8 +700,6 @@ responsibility of the patient and their insurance carrier.</p>
           <p>Never. You will know exactly what you pay before you receive any service. We believe in complete transparency—no hidden fees, no bills arriving weeks later.</p>
         </div>
       </div>
-      
-
       
       <div class="faq-item">
         <div class="faq-question">
