@@ -368,7 +368,56 @@
     }
     .cta-btn:hover { background: #2f6b3a; }
 
-    /* ========== CONTACT CARD (from main page) ========== */
+    /* ========== RELATED SERVICES ========== */
+    .related-wrap {
+      background: #F5F9F2;
+      padding: 56px 0;
+      border-top: 1px solid #e0ecd9;
+      border-bottom: 1px solid #e0ecd9;
+    }
+    .related-heading {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 1.5rem;
+      margin-bottom: 22px;
+      color: #083104;
+    }
+    .related-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 18px;
+    }
+    .related-card {
+      display: block;
+      background: white;
+      border: 1px solid #e0ecd9;
+      border-radius: 16px;
+      padding: 20px;
+      text-decoration: none;
+      color: inherit;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .related-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+    }
+    .related-card i {
+      color: #438950;
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+      display: block;
+    }
+    .related-card h3 {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 1.05rem;
+      margin-bottom: 6px;
+    }
+    .related-card p {
+      font-size: 0.88rem;
+      color: #4a6b3f;
+      margin: 0;
+    }
+
+    /* ========== CONTACT CARD ========== */
     .contact-card {
       background: #083104;
       color: white;
@@ -416,7 +465,7 @@
       border-radius: 28px;
     }
 
-    /* ========== SITE FOOTER (from main page) ========== */
+    /* ========== SITE FOOTER ========== */
     .site-footer {
       padding: 48px 0 32px;
       text-align: center;
@@ -470,7 +519,6 @@
       }
     }
 
-    /* utility bar responsive */
     @media (max-width: 640px) {
       div[style*="background-color: #083104"] > div {
         flex-direction: column !important;
@@ -515,6 +563,7 @@
     <div class="nav-links" id="navLinks">
       <a href="/#conditions"><i class="fas fa-list-ul"></i> Conditions</a>
       <a href="/#services"><i class="fas fa-stethoscope"></i> Services</a>
+      <a href="/pricing.html"><i class="fas fa-tag"></i> Pricing</a>
       <a href="/#about"><i class="fas fa-user-md"></i> About</a>
       <a href="/#contact"><i class="fas fa-map-marker-alt"></i> Contact</a>
       <a href="https://forms.gle/Y1WrzTN6Md8n541m6"><i class="fa-solid fa-pen-to-square"></i> Intake Forms</a>
@@ -730,7 +779,46 @@
     </div>
   </div>
 
-  <!-- Contact + Map (from main page) -->
+  <!-- Related Services -->
+  <div class="related-wrap">
+    <div class="container">
+      <h2 class="related-heading">Related Services</h2>
+      <div class="related-grid">
+        <a href="heel-pain.html" class="related-card">
+          <i class="fas fa-shoe-prints"></i>
+          <h3>Heel Pain</h3>
+          <p>Understand the causes of heel pain and the full range of conservative options.</p>
+        </a>
+        <a href="neuropathy.html" class="related-card">
+          <i class="fas fa-brain"></i>
+          <h3>Neuropathy</h3>
+          <p>Shockwave for nerve pain as part of a broader neuropathy treatment plan.</p>
+        </a>
+        <a href="ultrasound.html" class="related-card">
+          <i class="fas fa-wave-square"></i>
+          <h3>Diagnostic Ultrasound</h3>
+          <p>Pinpoint the exact source of pain before treatment begins.</p>
+        </a>
+        <a href="orthotics.html" class="related-card">
+          <i class="fas fa-shoe-prints"></i>
+          <h3>Custom Orthotics</h3>
+          <p>Correct biomechanics that contribute to chronic heel and tendon pain.</p>
+        </a>
+        <a href="cortisone.html" class="related-card">
+          <i class="fas fa-syringe"></i>
+          <h3>Cortisone Injections</h3>
+          <p>An alternative or complement for inflammatory pain.</p>
+        </a>
+        <a href="regenerative_injections.html" class="related-card">
+          <i class="fas fa-vial"></i>
+          <h3>Regenerative Injections</h3>
+          <p>Support tissue repair without steroids or surgery.</p>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Contact + Map -->
   <section id="contact">
     <div class="container">
       <h2 class="section-title" style="margin-top: 56px;"><i class="fas fa-address-card"></i> Take the next step — reach out today</h2>
@@ -757,23 +845,21 @@
   </section>
 </main>
 
-<!-- Site Footer (from main page) -->
+<!-- Site Footer -->
 <footer class="site-footer">
   <div class="container">
     <p><i class="fas fa-copyright"></i> 2026 Pathways Foot & Ankle. Oregon City, OR.</p>
   </div>
 </footer>
 
-<!-- Scroll to Top Button -->
+<!-- Scroll to Top -->
 <button class="scroll-top-btn" id="scrollToTopBtn" aria-label="Scroll to top">
   <i class="fas fa-arrow-up"></i>
 </button>
 
 <script>
-  // Hamburger menu toggle
   const hamburgerBtn = document.getElementById('hamburgerBtn');
   const navLinks = document.getElementById('navLinks');
-
   if (hamburgerBtn && navLinks) {
     hamburgerBtn.addEventListener('click', function() {
       navLinks.classList.toggle('show');
@@ -788,26 +874,18 @@
     });
   }
 
-  // Scroll to top button
   const scrollBtn = document.getElementById('scrollToTopBtn');
   const header = document.querySelector('.site-header');
-
   function toggleScrollButton() {
     if (!header) return;
     const headerRect = header.getBoundingClientRect();
-    const isHeaderOutOfSight = headerRect.bottom < 0;
-    const scrolledPastThreshold = window.scrollY > 300;
-    if (isHeaderOutOfSight || scrolledPastThreshold) {
+    if (headerRect.bottom < 0 || window.scrollY > 300) {
       scrollBtn.classList.add('show');
     } else {
       scrollBtn.classList.remove('show');
     }
   }
-
-  function scrollToTop() {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  }
-
+  function scrollToTop() { window.scrollTo({ top: 0, behavior: 'smooth' }); }
   window.addEventListener('scroll', toggleScrollButton);
   window.addEventListener('resize', toggleScrollButton);
   if (scrollBtn) scrollBtn.addEventListener('click', scrollToTop);
