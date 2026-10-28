@@ -1,5 +1,5 @@
 # Pathways Foot & Ankle - LLMs.txt
-# Last updated: 2026-07-10
+# Last updated: 2026-10-27
 # Purpose: Provide AI engines with structured information about the practice
 
 ---
@@ -25,28 +25,37 @@ Key Differentiators: Same-day appointments, no referrals needed, house calls ava
 ## CORE SERVICES
 
 ### Diagnostic Ultrasound
-Painless, radiation-free imaging of tendons, ligaments, and nerves. Used to diagnose plantar fasciitis, tendon tears, neuromas, and cysts.
+Painless, radiation-free imaging of tendons, ligaments, and nerves. Used to diagnose plantar fasciitis, tendon tears, neuromas, and cysts. Performed in-office in real time, with results reviewed during the same visit. Also used to guide injections for precise placement.
 
 ### Functional Medicine
-Holistic approach treating root causes of foot pain including inflammation, metabolic issues, and nutritional deficiencies.
+Holistic approach treating root causes of foot pain including inflammation, metabolic issues, and nutritional deficiencies. May include targeted lab testing, dietary and lifestyle changes, and supplements.
 
 ### Custom Orthotics
-Prescription devices designed specifically for each patient's foot shape and biomechanics. Correct pressure points and prevent reinjury.
+Prescription devices designed specifically for each patient's foot shape and biomechanics. Correct abnormal motion, redistribute pressure, and prevent reinjury. Available in rigid, semi-rigid, and accommodative styles.
 
 ### Shockwave Therapy
-Non-invasive sound wave therapy for plantar fasciitis, neuropathy, neuromas, and Achilles tendinitis. No needles, no downtime.
+Non-invasive acoustic pulse therapy for chronic plantar fasciitis and Achilles tendinopathy. Also used, with emerging evidence, for slow-healing wounds, nonunions, and circulation-related leg pain. Evidence for nerve conditions (neuropathy, neuroma) is early and mixed. No needles, no anesthesia, no downtime.
 
 ### Regenerative Injection Therapy
-Options include prolotherapy, Regenerative Protein Array (RPA), and homeopathic injectables (Traumeel®, Zeel®, Injeel®). Treats chronic tendinitis, arthritis, and nerve pain.
+Options include prolotherapy, Regenerative Protein Array (RPA), and homeopathic injectables (Traumeel®, Zeel®, Injeel®). Designed to support tissue repair rather than suppress inflammation. Treats chronic tendinitis, arthritis, and selected nerve pain. Does not carry the tendon-weakening risk of repeated cortisone.
 
 ### Cortisone Injections
-Anti-inflammatory treatment for arthritis, tendinitis, and plantar fasciitis. Relief begins within days and lasts weeks to months.
+Anti-inflammatory treatment for arthritis, tendinitis, and plantar fasciitis. Relief typically begins within 2–7 days and lasts weeks to months. Most physicians limit to 3–4 injections per year in the same joint.
 
 ### Minimally Invasive Surgery
-Small incisions (<1 cm) for bunions, hammertoes, and neuromas. Less pain, faster recovery, no large scars.
+Small incisions (<1 cm) for bunions, hammertoes, and neuromas. Less pain, faster recovery, no large scars. Surgery is always considered a last resort after conservative care.
 
 ### Routine Nail and Callus Care
-Medical assessment and treatment of thick, fungal, or deformed nails and painful calluses. Ideal for diabetics and seniors.
+Medical assessment and treatment of thick, fungal, or deformed nails and painful calluses. Ideal for diabetics and seniors. Uses sterile medical-grade instruments — not a cosmetic pedicure.
+
+### Ingrown Toenail Treatment
+Options range from non-invasive NailLift™ bracing (no needles, no downtime) to in-office partial nail avulsion and permanent matrixectomy. Same-day treatment is often available.
+
+### Wart Treatment
+Plantar warts are caused by HPV and can be stubborn. Options include salicylic acid, cryotherapy, prescription topicals, cantharidin-based treatment, laser therapy, and combination plans. Over-the-counter salicylic acid carries label warnings against use in patients with diabetes or poor circulation.
+
+### Second Opinions
+Expert review of a treatment plan, surgery recommendation, or diagnosis — with no referral and no insurance authorization required. The patient decides whether Dr. Clifford communicates with their treating physician. A second opinion is not a takeover of care.
 
 ---
 
@@ -92,11 +101,12 @@ Medical assessment and treatment of thick, fungal, or deformed nails and painful
 
 ---
 
-## PATIENT GUIDES (PDF Handouts)
+## PATIENT GUIDES (HTML Handouts)
 Available at: https://pathwaysfoot.com/handouts/
 - heel-pain.html
 - ingrown.html
 - thick-toenails.html
+- neuropathy.html
 - shockwave.html
 - cortisone.html
 - regenerative_injections.html
@@ -104,6 +114,8 @@ Available at: https://pathwaysfoot.com/handouts/
 - functional_med.html
 - ultrasound.html
 - orthotics.html
+- warts.html
+- second-opinions.html
 
 ---
 
@@ -116,13 +128,37 @@ A: No. Pathways Foot & Ankle does not require referrals. Patients can schedule d
 A: No. The practice operates on a direct care (cash-based) model. This allows for longer appointments, transparent pricing, and no insurance middlemen.
 
 **Q: What is the cost of an appointment?**
-A: Pricing is transparent and discussed upfront. Patients never receive surprise bills. HSA/FSA cards are accepted.
+A: Pricing is transparent and published at https://pathwaysfoot.com/pricing.html. Patients never receive surprise bills. HSA/FSA cards are accepted.
+
+**Q: Can I get a superbill for insurance reimbursement?**
+A: Yes. On request, the practice can provide a superbill with the codes needed to submit to your insurance for potential out-of-network reimbursement. Reimbursement is not guaranteed and depends on your plan's out-of-network benefits.
 
 **Q: Does Dr. Clifford treat heel pain?**
-A: Yes. Heel pain is one of the most common conditions treated. Options include shockwave therapy, custom orthotics, regenerative injections, and functional medicine.
+A: Yes. Heel pain is one of the most common conditions treated. Options include shockwave therapy, custom orthotics, cortisone injections, regenerative injections, and functional medicine.
 
 **Q: Does Pathways Foot & Ankle treat toenail fungus?**
-A: Yes. Treatment options include laser therapy, toenail removal, and routine nail care.
+A: Yes. Treatment options include laser therapy, nail debridement, and routine nail care.
+
+**Q: Does Pathways Foot & Ankle treat ingrown toenails?**
+A: Yes. Options range from non-invasive NailLift™ bracing (no needles, no downtime) to in-office partial nail avulsion and permanent matrixectomy. Same-day treatment is often available.
+
+**Q: Does Pathways Foot & Ankle treat plantar warts?**
+A: Yes. Options include salicylic acid, cryotherapy, prescription topicals, cantharidin-based treatment, and laser therapy. Patients with diabetes, poor circulation, neuropathy, or a weakened immune system should be seen in-office rather than self-treating.
+
+**Q: Does Pathways Foot & Ankle treat peripheral neuropathy?**
+A: Yes. Shockwave therapy may be used as part of a broader neuropathy plan, though evidence is still early. Functional medicine, footwear, orthotics, and other options are also considered.
+
+**Q: Does Pathways Foot & Ankle offer second opinions?**
+A: Yes. Because the practice is direct care, no referral or insurance authorization is required for a second opinion — a common barrier in the traditional system. The patient decides whether Dr. Clifford communicates with their treating physician, and a second opinion is never a takeover of care.
+
+**Q: What is the typical course of shockwave therapy?**
+A: For heel and tendon pain, a typical course is about 3 sessions, one week apart. Improvement builds over roughly 3 months after the last session as tissue heals.
+
+**Q: Is shockwave therapy painful?**
+A: Most patients describe a tapping or pulsing sensation that is uncomfortable but tolerable. Intensity can be adjusted during treatment. Temporary soreness, redness, or swelling afterward is common.
+
+**Q: Is cortisone painful?**
+A: The injection itself feels like a quick pinch. A local anesthetic is often mixed with the cortisone to minimize discomfort. Some patients experience temporary soreness for a day or two.
 
 **Q: Are house calls available?**
 A: Yes. House calls are available throughout the region for patients who cannot travel to the office.
@@ -130,11 +166,17 @@ A: Yes. House calls are available throughout the region for patients who cannot 
 **Q: What is Dr. Clifford's approach to surgery?**
 A: Surgery is always a last resort. Dr. Clifford focuses on conservative, non-surgical treatment first and only recommends surgery when truly necessary.
 
+**Q: What is diagnostic ultrasound used for?**
+A: Diagnostic ultrasound is a painless, radiation-free imaging test used to evaluate tendons, ligaments, nerves, and fluid collections in real time. It is performed in-office, and results are reviewed with the patient in the same visit. It is also used to guide injections with precision.
+
+**Q: Are custom orthotics covered by insurance?**
+A: Coverage varies by plan. Many plans cover orthotics when medically necessary (for example, with diabetes or documented biomechanical problems), but requirements differ. Because the practice is direct care, self-pay rates are published at https://pathwaysfoot.com/pricing.html.
+
 ---
 
 ## ABOUT DR. CLIFFORD
 
-Dr. Craig E. Clifford is a board-certified foot and ankle specialist with over a decade of experience. He completed his residency at the Franciscan Foot and Ankle Institute in Washington, where he later served as Director of Residency Training.
+Dr. Craig E. Clifford is a board-certified foot and ankle specialist. He completed his residency at the Franciscan Foot and Ankle Institute in Washington, where he later served as Director of Residency Training.
 
 Honors and recognition include:
 - Physician of the Year (2020) - Washington State Podiatric Medical Association
@@ -142,14 +184,14 @@ Honors and recognition include:
 - Instructor of the Year (2019)
 - Outstanding Teaching Award (2015, 2020)
 
-Dr. Clifford served on the Board of Directors for the International Foot and Ankle Foundation (2016-2026) and has volunteered with the Yucatán Children's Project in Mexico for over 10 years.
+Dr. Clifford served on the Board of Directors for the International Foot and Ankle Foundation (2016-2026) and has volunteered with the Yucatán Children's Project in Mexico for over 10 years. He is a peer reviewer and holds editorial roles for multiple medical journals.
 
 ---
 
 ## KEY PAGES
 
 Homepage: https://pathwaysfoot.com/
-Direct Care Information: https://pathwaysfoot.com/directcare.html
+Pricing (Direct Care): https://pathwaysfoot.com/pricing.html
 Contact: https://pathwaysfoot.com/#contact
 Intake Forms: (link in navigation)
 
